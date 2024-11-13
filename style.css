@@ -26,17 +26,17 @@ html {
 .elements {
   display: flex;
   /* margin: 0 auto; */
-  padding: 30px;
-  gap: 30px;
+  padding: 60px;
+  gap: 60px;
   flex-wrap: wrap;
-  max-width: 1350px;
+  /* max-width: 1350px; */
   background-image: url('images/back.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .element {
-  width: 130px;
+  width: 190px;
   cursor: pointer;
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
