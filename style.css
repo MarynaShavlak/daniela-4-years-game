@@ -1,0 +1,46 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.elements {
+  display: flex;
+  /* margin: 0 auto; */
+  padding: 30px;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1350px;
+  background-image: url('images/back.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.element {
+  width: 130px;
+  cursor: pointer;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.element:hover {
+  transform: scale(1.1);
+}
