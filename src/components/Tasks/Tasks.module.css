@@ -37,6 +37,16 @@
     padding: 30px;
 
 }
+.btnList {
+    li {
+        display: flex;
+
+        align-items: flex-end;
+
+
+    }
+
+}
 
 .tasksButtonList {
     margin: 0;
@@ -46,11 +56,6 @@
     flex-wrap: wrap;
     gap: 30px;
     width: 40%;
-
-    li {
-        display: flex;
-        align-items: flex-end;
-    }
 }
 
 .tasksButtonListSmall {
@@ -62,17 +67,16 @@
     flex-wrap: wrap;
     width: 35%;
 
-    li {
-        display: flex;
-        align-items: flex-end;
-    }
+
 }
 
 .taskButton {
   height:130px;
-
+    cursor: pointer;
 }
 
+.taskButton:hover {
+    filter: drop-shadow(0 0 0.75rem crimson);}
 
 .btn--8 {
 transform: translateX(-20px);
@@ -92,4 +96,11 @@ transform: translateX(-20px);
     transform: translateY(10px);
 }
 
-
+@media screen and (min-width: 1680px) {
+    .taskButton {
+        height: 180px;
+    }
+    .btn--3, .btn--5 ,.btn--7 ,.btn--8 , .btn--6 {
+        height:160px;
+    }
+}

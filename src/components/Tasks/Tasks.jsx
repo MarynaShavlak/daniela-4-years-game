@@ -37,11 +37,11 @@ export const Tasks = () => {
 
     return (
         <div className={clx.tasks}>
-            <video autoPlay id="tasksVideo" controls className={clx.fullscreenVideo}>
+            <video autoPlay id="tasksVideo" controls className={clx.fullscreenVideo} loop>
                 <source src={taskVideo} type="video/mp4"/>
             </video>
             <div className={clx.listWrapper}>
-                <ul className={clx.tasksButtonList}>
+                <ul  className={`${clx.tasksButtonList} ${clx.btnList}`} >
                     {tasks1.map((task) => (
                         <li key={task.symbol}>
                             <img
@@ -53,7 +53,7 @@ export const Tasks = () => {
                         </li>
                     ))}
                 </ul>
-                <ul className={clx.tasksButtonListSmall}>
+                <ul className={`${clx.tasksButtonListSmall} ${clx.btnList}`}>
                     {tasks2.map((task) => (
                         <li key={task.symbol}>
                             <img
@@ -65,7 +65,7 @@ export const Tasks = () => {
                         </li>
                     ))}
                 </ul>
-                <ul className={clx.tasksButtonList}>
+                <ul className={`${clx.tasksButtonList} ${clx.btnList}`}>
                     {tasks3.map((task) => (
                         <li key={task.symbol}>
                             <img
