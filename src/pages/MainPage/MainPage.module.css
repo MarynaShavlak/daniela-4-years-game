@@ -1,6 +1,0 @@
-.mainPage {
-    background-image: url("../../images/slides/main.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh; /* Ensures the div covers the full viewport height */
-}
