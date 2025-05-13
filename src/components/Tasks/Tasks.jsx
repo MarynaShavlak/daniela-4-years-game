@@ -40,42 +40,45 @@ export const Tasks = () => {
             <video autoPlay id="tasksVideo" controls className={clx.fullscreenVideo}>
                 <source src={taskVideo} type="video/mp4"/>
             </video>
-            <ul className={clx.tasksButtonList}>
-                {tasks1.map((task) => (
-                    <li key={task.symbol}>
-                        <img
-                            src={taskImages[task.symbol]}
-                            alt={task.symbol}
-                            id={task.symbol}
-                            className={clx.taskButton}
-                        />
-                    </li>
-                ))}
-            </ul>
-            <ul className={clx.tasksButtonListSmall}>
-                {tasks2.map((task) => (
-                    <li key={task.symbol}>
-                        <img
-                            src={taskImages[task.symbol]}
-                            alt={task.symbol}
-                            id={task.symbol}
-                            className={clx.taskButton}
-                        />
-                    </li>
-                ))}
-            </ul>
-            <ul className={clx.tasksButtonList}>
-                {tasks3.map((task) => (
-                    <li key={task.symbol}>
-                        <img
-                            src={taskImages[task.symbol]}
-                            alt={task.symbol}
-                            id={task.symbol}
-                            className={clx.taskButton}
-                        />
-                    </li>
-                ))}
-            </ul>
+            <div className={clx.listWrapper}>
+                <ul className={clx.tasksButtonList}>
+                    {tasks1.map((task) => (
+                        <li key={task.symbol}>
+                            <img
+                                src={taskImages[task.symbol]}
+                                alt={task.symbol}
+                                id={task.symbol}
+                                className={`${clx.taskButton} ${clx[`btn--${task.symbol}`]}`}
+                            />
+                        </li>
+                    ))}
+                </ul>
+                <ul className={clx.tasksButtonListSmall}>
+                    {tasks2.map((task) => (
+                        <li key={task.symbol}>
+                            <img
+                                src={taskImages[task.symbol]}
+                                alt={task.symbol}
+                                id={task.symbol}
+                                className={`${clx.taskButton} ${clx[`btn--${task.symbol}`]}`}
+                            />
+                        </li>
+                    ))}
+                </ul>
+                <ul className={clx.tasksButtonList}>
+                    {tasks3.map((task) => (
+                        <li key={task.symbol}>
+                            <img
+                                src={taskImages[task.symbol]}
+                                alt={task.symbol}
+                                id={task.symbol}
+                                className={`${clx.taskButton} ${clx[`btn--${task.symbol}`]}`}
+                            />
+                        </li>
+                    ))}
+                </ul>
+            </div>
+
         </div>
     );
 };

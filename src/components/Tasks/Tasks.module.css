@@ -27,31 +27,69 @@
     z-index: 0;
 }
 
+.listWrapper {
+    z-index:2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 100vh;
+    padding: 30px;
+
+}
 
 .tasksButtonList {
     margin: 0;
     padding: 0;
     list-style: none;
-    z-index:2;
-    position: relative;
     display: flex;
     flex-wrap: wrap;
+    gap: 30px;
     width: 40%;
-    background-color: yellow;
+
+    li {
+        display: flex;
+        align-items: flex-end;
+    }
 }
 
 .tasksButtonListSmall {
     margin: 0;
     padding: 0;
     list-style: none;
-    z-index:2;
-    position: relative;
     display: flex;
+    gap:30px;
     flex-wrap: wrap;
-    width: 30%;
-    background-color: green;
+    width: 35%;
+
+    li {
+        display: flex;
+        align-items: flex-end;
+    }
 }
 
 .taskButton {
-  width:100px;
+  height:130px;
+
 }
+
+
+.btn--8 {
+transform: translateX(-20px);
+    height: 110px;
+}
+
+.btn--7 {
+  height: 110px;
+}
+
+.btn--5 {
+    height: 110px;
+}
+
+.btn--3 {
+    height: 110px;
+    transform: translateY(10px);
+}
+
+
