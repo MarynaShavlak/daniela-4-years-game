@@ -2,7 +2,7 @@
 import React, {useRef, useEffect, useState} from 'react';
 import clx from './Rules.module.css';
 import taskVideo from '../../video/task.mp4';
-import {Tasks} from "../Tasks/Tasks";
+import {Dashboard} from "../Dashboard/Dashboard";
 
 
 export const Rules = () => {
@@ -34,7 +34,7 @@ export const Rules = () => {
 
     return (
         <>
-            {showTasks ? <Tasks /> : <RulesVideo />}
+            {showTasks ? <Dashboard /> : <RulesVideo />}
         </>
     );
 };
