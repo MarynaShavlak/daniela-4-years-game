@@ -17,13 +17,17 @@
     overflow: hidden;
 }
 
-.toAllTasksButton {
+.controlBtnsList {
     position: absolute;
     top: 20px;
     left: 20px;
     z-index:2;
-    margin: 0;
-    border:none;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.btn {
     border-radius: 20px;
     background-color: #FF171A;
     color: #111111;
@@ -31,8 +35,33 @@
     cursor: pointer;
     font-weight: 900;
     padding: 10px;
-     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1), color 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.btn:hover {
+    color: #FF171A;
+    background-color: #111111;
+}
+
+.audioBtnsList {
+    display: flex;
+    justify-content: space-between;
+}
+
+.audioButton {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    ion-icon {
+        font-size: 32px;
+    }
+}
+
+
 
 .questionDog{
     .hoverBlock {
