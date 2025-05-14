@@ -38,13 +38,13 @@
     .hoverBlock {
         z-index:2;
         position: absolute;
-        left: calc(100vw - 1000px);
-        bottom: -200px;
+        left: calc(100vw - 70vw);
+        bottom: -20vh;
         cursor:pointer;
 
         .hoverImg{
-            width:1000px;
-            height: 1000px;
+            width: 80vw;
+            height: 100vh;
         }
     }
 }

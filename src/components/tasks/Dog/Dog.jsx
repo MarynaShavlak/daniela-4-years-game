@@ -5,6 +5,7 @@ import taskVideo from '../../../video/tasks/dog.mp4';
 import dogHover from '../../../images/hover/dog.png';
 import questionSign from '../../../images/decor/question.gif';
 
+
 export const Dog = ({handleToAllTasksClick}) => {
 
     return (
@@ -22,6 +23,7 @@ export const Dog = ({handleToAllTasksClick}) => {
             <div className={clx.hoverBlock}>
                 <img src={dogHover} className={clx.hoverImg}/>
                 <img src={questionSign} className={clx.questionSign}/>
+
             </div>
         </div>
     );
