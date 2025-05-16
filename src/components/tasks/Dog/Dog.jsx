@@ -11,6 +11,8 @@ import { playOutline, pauseOutline, refreshOutline } from 'ionicons/icons';
 export const Dog = ({handleToAllTasksClick}) => {
     const audioRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(true);
+    const [showHoverBlock, setShowHoverBlock] = useState(true);
+    const [fadeOut, setFadeOut] = useState(false);
 
     const handleAudioToggle = () => {
         if (isPlaying) {
@@ -26,6 +28,18 @@ export const Dog = ({handleToAllTasksClick}) => {
         audioRef.current.play();
         setIsPlaying(true);
     }
+
+    const handleHoverBlockClick = () => {
+        // Start fade out animation
+        setFadeOut(true);
+    };
+
+    const handleTransitionEnd = () => {
+        // After fade out, remove hoverBlock from DOM
+        if (fadeOut) {
+            setShowHoverBlock(false);
+        }
+    };
     return (
         <div className={`${clx.question} ${clx.questionDog}`}>
             <video autoPlay id="dogVideo" controls className={clx.fullscreenVideo} loop>
@@ -59,11 +73,16 @@ export const Dog = ({handleToAllTasksClick}) => {
             </div>
 
 
-            <div className={clx.hoverBlock}>
-                <img src={dogHover} className={clx.hoverImg}/>
-                <img src={questionSign} className={clx.questionSign}/>
-
-            </div>
+            {showHoverBlock && (
+                <div
+                    className={`${clx.hoverBlock} ${fadeOut ? clx.fadeOut : ''}`}
+                    onClick={handleHoverBlockClick}
+                    onTransitionEnd={handleTransitionEnd}
+                >
+                    <img src={dogHover} className={clx.hoverImg} alt="Hover Image" />
+                    <img src={questionSign} className={clx.questionSign} alt="Question Sign" />
+                </div>
+            )}
         </div>
     );
 };
