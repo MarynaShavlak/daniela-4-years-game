@@ -1,20 +1,19 @@
-import React, {useRef, useState} from 'react';
-import clx from '../Task.module.css';
-import questionSign from '../../../images/decor/question.gif';
-import { IonIcon } from '@ionic/react';
-import { playOutline, pauseOutline, refreshOutline } from 'ionicons/icons';
-import {getObjectMedia} from "../../../data/tasksMedia";
+import {useRef, useState} from "react";
+import {getObjectMedia} from "../../data/tasksMedia";
+import clx from './Task.module.css';
+import {capitalizeFirstLetter} from "../../utils/capitalizeFirstLetter";
 
-export const Dog = ({handleToAllTasksClick}) => {
+export const Task = ({handleToAllTasksClick, taskName}) => {
     const audioRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(true);
     const [showHoverBlock, setShowHoverBlock] = useState(true);
     const [fadeOut, setFadeOut] = useState(false);
-
-    const media = getObjectMedia('dog');
+    const capitalizedTaskName = capitalizeFirstLetter(taskName);
+    const questionClass = `${clx.question} ${clx[`question${capitalizedTaskName}`] || ''}`;
+    const media = getObjectMedia(taskName);
     console.log(media);
     if (!media) {
-        return <div>No media found for {'dog'}</div>;
+        return <div>No media found for `${taskName}`</div>;
     }
 
     const handleAudioToggle = () => {
@@ -44,7 +43,7 @@ export const Dog = ({handleToAllTasksClick}) => {
         }
     };
     return (
-        <div className={`${clx.question} ${clx.questionDog}`}>
+        <div className={questionClass}>
             <video autoPlay id="dogVideo" controls className={clx.fullscreenVideo} loop>
                 <source src={media.video} type="video/mp4"/>
             </video>

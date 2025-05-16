@@ -20,7 +20,8 @@ export const Dashboard = () => {
 
     const tasks1 = [
         { symbol: "a", component: <Dog handleToAllTasksClick={handleToAllTasksClick}/> },
-        { symbol: "2", component: null },
+        // { symbol: "2", component: <Bear handleToAllTasksClick={handleToAllTasksClick}/>},
+        { symbol: "2", component: null},
         { symbol: "b", component: null },
         { symbol: "0", component: null },
     ];
