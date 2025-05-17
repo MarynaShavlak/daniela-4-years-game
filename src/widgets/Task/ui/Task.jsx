@@ -10,15 +10,14 @@ import {getAudioBtnsAlignStyle} from "../../../shared/utils/getAudioBtnsAlignSty
 import {useAudioPlayer} from "../hooks/useAudioPlayer";
 import {AudioControls} from "../../../features/AudioControls/ui/AudioControls";
 import {Button} from "../../../shared/ui/Button/Button";
+import {HoverBlock} from "./HoverBlock/HoverBlock";
+import {TaskControls} from "./TaskControls/TaskControls";
+import {TaskMedia} from "./TaskMedia/TaskMedia";
 
 
 
 export const Task = ({handleToAllTasksClick, taskName, controlsPos}) => {
 
-    const [showHoverBlock, setShowHoverBlock] = useState(true);
-    const [fadeOut, setFadeOut] = useState(false);
-    const capitalizedTaskName = capitalizeFirstLetter(taskName);
-    const questionClass = `${clx.question} ${clx[`question${capitalizedTaskName}`] || ''}`;
     const media = getObjectMedia(taskName);
     const positionStyles = getControlPositionStyles(controlsPos);
     const audioBtnsAlignStyle = getAudioBtnsAlignStyle(controlsPos);
@@ -34,57 +33,18 @@ export const Task = ({handleToAllTasksClick, taskName, controlsPos}) => {
         return <div>No media found for `${taskName}`</div>;
     }
 
-
-
-
-
-    const handleHoverBlockClick = () => {
-        // Start fade out animation
-        setFadeOut(true);
-        console.log('click on blok')
-    };
-
-    const handleTransitionEnd = () => {
-        // After fade out, remove hoverBlock from DOM
-        if (fadeOut) {
-            setShowHoverBlock(false);
-        }
-    };
     return (
-        <div className={questionClass}>
-            <video autoPlay id="dogVideo" className={clx.fullscreenVideo} loop>
-                <source src={media.video} type="video/mp4"/>
-            </video>
-            <audio autoPlay ref={audioRef}>
-                <source src={media.audio} type="audio/mp4"/>
-            </audio>
-            <div className={clx.controlBtnsList} style={positionStyles}>
-                <Button
-                    onClick={handleToAllTasksClick}
-                    className={clx.toAllTasksButton}
-                >
-                    Всі завдання
-                </Button>
-                <AudioControls
-                    isPlaying={isPlaying}
-                    onToggle={toggleAudio}
-                    onReplay={replayAudio}
-                    alignStyle={audioBtnsAlignStyle}
-                />
-
-
-            </div>
-
-            {showHoverBlock && (
-                <div
-                    className={`${clx.hoverBlock} ${fadeOut ? clx.fadeOut : ''}`}
-                    onClick={handleHoverBlockClick}
-                    onTransitionEnd={handleTransitionEnd}
-                >
-                    <img src={media.hoverImage} className={clx.hoverImg} alt="Hover Image" />
-                    <img src={questionSign} className={clx.questionSign} alt="Question Sign" />
-                </div>
-            )}
+        <div className={clx.question}>
+            <TaskMedia videoSrc={media.video} audioSrc={media.audio} audioRef={audioRef} />
+            <TaskControls
+                handleToAllTasksClick={handleToAllTasksClick}
+                positionStyles={positionStyles}
+                isPlaying={isPlaying}
+                toggleAudio={toggleAudio}
+                replayAudio={replayAudio}
+                alignStyle={audioBtnsAlignStyle}
+            />
+            <HoverBlock imageSrc={media.hoverImage} taskName={taskName}/>
         </div>
     );
 };

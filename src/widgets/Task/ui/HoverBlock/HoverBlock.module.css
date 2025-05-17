@@ -1,0 +1,280 @@
+.question {
+    .hoverBlock {
+        z-index: 4;
+        cursor: pointer;
+        opacity: 1;
+        pointer-events: auto;
+        transition: opacity 0.5s ease;
+    }
+}
+
+
+.hoverBlock.fadeOut {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.questionDog__hoverBlock {
+        z-index: 2;
+        position: absolute;
+        left: calc(100vw - 70vw);
+        bottom: -20vh;
+        .hoverImg{
+            width: 80vw;
+            height: 100vh;
+        }
+}
+
+
+
+
+.questionBear__hoverBlock {
+
+        position: absolute;
+        left: calc(100vw - 55vw);
+        bottom: -20vh;
+
+        .hoverImg{
+            width: 50vw;
+            height: 150vh;
+        }
+
+}
+
+.questionBehemoth__hoverBlock {
+
+        position: absolute;
+        left: -15vw;
+        bottom:-25vh;
+
+        .hoverImg{
+            width: 80vw;
+            height: 110vh;
+
+
+    }
+}
+
+.questionCar__hoverBlock  {
+
+        position: absolute;
+        left: calc(100vw - 83vw);
+        bottom:17vh;
+
+        .hoverImg{
+            width: 83vw;
+            height: 90vh;
+
+
+    }
+}
+
+.questionCat__hoverBlock  {
+
+        position: absolute;
+        left: calc(100vw - 55vw);
+        bottom:5vh;
+
+        .hoverImg{
+            width: 65vw;
+            height: 115vh;
+
+
+    }
+}
+
+.questionCrab__hoverBlock {
+
+        position: absolute;
+        left: -8vw;
+        bottom:-7vh;
+
+        .hoverImg{
+            width: 70vw;
+            height: 110vh;
+
+
+    }
+}
+
+.questionDinosaur__hoverBlock  {
+
+        position: absolute;
+        left: calc(100vw - 85vw);
+        bottom:5vh;
+
+        .hoverImg{
+            width: 70vw;
+            height: 120vh;
+
+
+    }
+}
+
+.questionFox__hoverBlock  {
+
+        position: absolute;
+        left: calc(100vw - 60vw);
+        bottom:-30vh;
+
+        .hoverImg{
+            width: 42vw;
+            height: 110vh;
+
+        }
+
+}
+
+.questionFrog__hoverBlock {
+
+        position: absolute;
+        left: -12vw;
+        bottom: -17vh;
+
+        .hoverImg{
+            width: 120vw;
+            height: 80vh;
+
+        }
+
+}
+
+.questionGhost__hoverBlock {
+
+        position: absolute;
+        left: calc(100vw - 48vw);
+        bottom:-20vh;
+
+        .hoverImg{
+            width: 60vw;
+            height: 115vh;
+
+        }
+
+}
+
+.questionIcecream__hoverBlock {
+
+        position: absolute;
+        left: -12vw;
+        bottom:-25vh;
+
+        .hoverImg{
+            width: 70vw;
+            height: 120vh;
+
+
+    }
+}
+
+.questionMouse__hoverBlock  {
+
+        position: absolute;
+        left: -10vw;
+        bottom:-10vh;
+
+        .hoverImg{
+            width: 40vw;
+            height: 50vh;
+
+
+
+    }
+    .questionSign {
+        height: 20vh;
+        width: auto;
+    }
+}
+
+
+.questionPig__hoverBlock  {
+
+        position: absolute;
+        left: calc(100vw - 85vw);
+        bottom:-3vh;
+
+        .hoverImg{
+            width: 70vw;
+            height: 100vh;
+
+
+    }
+}
+
+.questionSheep__hoverBlock {
+
+        position: absolute;
+        left: -12vw;
+        bottom:-20vh;
+
+        .hoverImg{
+            width: 65vw;
+            height: 140vh;
+
+        }
+
+}
+
+.questionSnail__hoverBlock  {
+
+        position: absolute;
+        left: calc(100vw - 45vw);
+        bottom:-5vh;
+
+        .hoverImg{
+            width: 55vw;
+            height: 80vh;
+
+        }
+
+}
+
+
+.questionTree__hoverBlock {
+
+        position: absolute;
+        left: calc(100vw - 85vw);
+        bottom:-5vh;
+
+        .hoverImg{
+            width: 50vw;
+            height: 105vh;
+
+
+    }
+}
+
+.questionTurtle__hoverBlock  {
+
+        position: absolute;
+        left: -5vw;
+        bottom:-22vh;
+
+        .hoverImg{
+            width: 50vw;
+            height: 122vh;
+
+        }
+
+}
+
+.questionUnicorn__hoverBlock {
+        position: absolute;
+        left: calc(100vw - 50vw);
+        bottom:0vh;
+        .hoverImg{
+            width: 60vw;
+            height: 110vh;
+
+        }
+}
+
+.questionSign {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+}
