@@ -1,0 +1,16 @@
+.audioBtnsList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+
+.audioButton {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    ion-icon {
+        font-size: 32px;
+    }
+}

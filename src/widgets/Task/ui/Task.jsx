@@ -1,16 +1,20 @@
-import React, {useRef, useState} from "react";
-import {getObjectMedia} from "../../data/tasksMedia";
+import React, { useState} from "react";
+
 import clx from './Task.module.css';
-import {capitalizeFirstLetter} from "../../utils/capitalizeFirstLetter";
-import { IonIcon } from '@ionic/react';
-import { playOutline, pauseOutline, refreshOutline } from 'ionicons/icons';
-import questionSign from '../../images/decor/question.gif';
-import {getControlPositionStyles} from "../../utils/getControlPositionStyles";
-import {getAudioBtnsAlignStyle} from "../../utils/getAudioBtnsAlignStyle";
+
+import questionSign from '../../../shared/assets/images/decor/question.gif'
+import {capitalizeFirstLetter} from "../../../shared/utils/capitalizeFirstLetter";
+import {getObjectMedia} from "../../../shared/utils/tasksMediaManager";
+import {getControlPositionStyles} from "../../../shared/utils/getControlPositionStyles";
+import {getAudioBtnsAlignStyle} from "../../../shared/utils/getAudioBtnsAlignStyle";
+import {useAudioPlayer} from "../hooks/useAudioPlayer";
+import {AudioControls} from "../../../features/AudioControls/ui/AudioControls";
+import {Button} from "../../../shared/ui/Button/Button";
+
+
 
 export const Task = ({handleToAllTasksClick, taskName, controlsPos}) => {
-    const audioRef = useRef(null);
-    const [isPlaying, setIsPlaying] = useState(true);
+
     const [showHoverBlock, setShowHoverBlock] = useState(true);
     const [fadeOut, setFadeOut] = useState(false);
     const capitalizedTaskName = capitalizeFirstLetter(taskName);
@@ -19,27 +23,20 @@ export const Task = ({handleToAllTasksClick, taskName, controlsPos}) => {
     const positionStyles = getControlPositionStyles(controlsPos);
     const audioBtnsAlignStyle = getAudioBtnsAlignStyle(controlsPos);
 
+    const {
+        audioRef,
+        isPlaying,
+        toggleAudio,
+        replayAudio
+    } = useAudioPlayer(true);
+
     if (!media) {
         return <div>No media found for `${taskName}`</div>;
-
-
-
     }
 
-    const handleAudioToggle = () => {
-        if (isPlaying) {
-            audioRef.current.pause();
-        } else {
-            audioRef.current.play();
-        }
-        setIsPlaying(!isPlaying);
-    };
 
-    const handleReplayFromStart = () => {
-        audioRef.current.currentTime = 0;
-        audioRef.current.play();
-        setIsPlaying(true);
-    }
+
+
 
     const handleHoverBlockClick = () => {
         // Start fade out animation
@@ -62,26 +59,19 @@ export const Task = ({handleToAllTasksClick, taskName, controlsPos}) => {
                 <source src={media.audio} type="audio/mp4"/>
             </audio>
             <div className={clx.controlBtnsList} style={positionStyles}>
-                <button
-                    className={`${clx.btn} ${clx.toAllTasksButton}`}
+                <Button
                     onClick={handleToAllTasksClick}
+                    className={clx.toAllTasksButton}
                 >
                     Всі завдання
-                </button>
-                <div className={clx.audioBtnsList} style={audioBtnsAlignStyle} >
-                    <button
-                        className= {`${clx.btn} ${clx.audioButton}`}
-                        onClick={handleAudioToggle}
-                    >
-                        {isPlaying ? <IonIcon icon={pauseOutline}/> : <IonIcon icon={playOutline}/>}
-                    </button>
-                    <button
-                        className={`${clx.btn} ${clx.audioButton}`}
-                        onClick={handleReplayFromStart}
-                    >
-                        <IonIcon icon={refreshOutline}/>
-                    </button>
-                </div>
+                </Button>
+                <AudioControls
+                    isPlaying={isPlaying}
+                    onToggle={toggleAudio}
+                    onReplay={replayAudio}
+                    alignStyle={audioBtnsAlignStyle}
+                />
+
 
             </div>
 

@@ -21,9 +21,9 @@ const OBJECTS = [
 
 
 const MEDIA_TYPES = {
-    video: (name) => require(`../video/tasks/${name}.mp4`),
-    audio: (name) => require(`../audio/${name}.m4a`),
-    hoverImage: (name) => require(`../images/hover/${name}.png`)
+    video: (name) => require(`../assets/video/tasks/${name}.mp4`),
+    audio: (name) => require(`../assets/audio/${name}.m4a`),
+    hoverImage: (name) => require(`../assets/images/hover/${name}.png`)
 };
 
 

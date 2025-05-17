@@ -1,8 +1,10 @@
 import clx from "./Dashboard.module.css";
-import taskVideo from "../../video/task.mp4";
+import taskVideo from '../../../shared/assets/video/task.mp4'
 import React from "react";
-import {taskImages} from "../../utils/taskImages";
-import {Task} from "../tasks/Task";
+import {Task} from "../../../widgets/Task/ui/Task";
+import {taskImages} from "../../../shared/utils/taskImages";
+
+
 
 export const Dashboard = () => {
     // State to track the currently displayed task component

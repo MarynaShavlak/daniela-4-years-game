@@ -1,8 +1,8 @@
 // RulesPage.jsx
-import React, {useRef, useEffect, useState} from 'react';
+import React, { useState} from 'react';
 import clx from './Rules.module.css';
-import taskVideo from '../../video/task.mp4';
-import {Dashboard} from "../Dashboard/Dashboard";
+import {Dashboard} from "../Dashboard/ui/Dashboard";
+
 
 
 export const Rules = () => {

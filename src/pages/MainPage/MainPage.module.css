@@ -1,0 +1,6 @@
+.initialView {
+    background-image: url("../../shared/assets/images/slides/main.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
