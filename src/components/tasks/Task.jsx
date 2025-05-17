@@ -1,4 +1,4 @@
-import {useRef, useState} from "react";
+import React, {useRef, useState} from "react";
 import {getObjectMedia} from "../../data/tasksMedia";
 import clx from './Task.module.css';
 import {capitalizeFirstLetter} from "../../utils/capitalizeFirstLetter";
@@ -76,7 +76,6 @@ export const Task = ({handleToAllTasksClick, taskName}) => {
                 </div>
 
             </div>
-
 
             {showHoverBlock && (
                 <div
