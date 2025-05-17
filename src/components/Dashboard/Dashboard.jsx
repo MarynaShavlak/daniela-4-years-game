@@ -3,6 +3,7 @@ import taskVideo from "../../video/task.mp4";
 import React from "react";
 import {taskImages} from "../../utils/taskImages";
 import {Dog} from "../tasks/Dog/Dog";
+import {Task} from "../tasks/Task";
 
 export const Dashboard = () => {
     // State to track the currently displayed task component
@@ -19,33 +20,34 @@ export const Dashboard = () => {
 
 
     const tasks1 = [
-        { symbol: "a", component: <Dog handleToAllTasksClick={handleToAllTasksClick}/> },
-        // { symbol: "2", component: <Bear handleToAllTasksClick={handleToAllTasksClick}/>},
-        { symbol: "2", component: null},
-        { symbol: "b", component: null },
-        { symbol: "0", component: null },
+        { symbol: "a", component: <Task taskName={'bear'} handleToAllTasksClick={handleToAllTasksClick}/> },
+        { symbol: "2", component: <Task taskName={'behemoth'} handleToAllTasksClick={handleToAllTasksClick}/>},
+        {symbol: "b", component: <Task taskName={'car'} handleToAllTasksClick={handleToAllTasksClick}/>},
+        { symbol: "0", component: <Task taskName={'cat'} handleToAllTasksClick={handleToAllTasksClick}/>},
+
     ];
     const tasks2 = [
-        { symbol: "8", component: null },
-        { symbol: "h", component: null },
-        { symbol: "6", component: null },
-        { symbol: "c", component: null },
-        { symbol: "5", component: null },
-        { symbol: "t", component: null },
+        { symbol: "8", component: <Task taskName={'crab'} handleToAllTasksClick={handleToAllTasksClick}/>},
+        { symbol: "h", component: <Task taskName={'dinosaur'} handleToAllTasksClick={handleToAllTasksClick}/>},
+        { symbol: "6", component: <Task taskName={'dog'} handleToAllTasksClick={handleToAllTasksClick}/>},
+        { symbol: "c", component: <Task taskName={'fox'} handleToAllTasksClick={handleToAllTasksClick}/>},
+        { symbol: "5", component: <Task taskName={'frog'} handleToAllTasksClick={handleToAllTasksClick}/>},
+        { symbol: "t", component: <Task taskName={'ghost'} handleToAllTasksClick={handleToAllTasksClick}/>},
+
 
 
 
     ];
     const tasks3 = [
 
-        { symbol: "7", component: null },
-        { symbol: "m", component: null },
-        { symbol: "3", component: null },
-        { symbol: "k", component: null },
-        { symbol: "1", component: null },
-        { symbol: "9", component: null },
-        { symbol: "p", component: null },
-        { symbol: "4", component: null },
+        { symbol: "7", component: <Task taskName={'icecream'} handleToAllTasksClick={handleToAllTasksClick}/> },
+        { symbol: "m", component: <Task taskName={'mouse'} handleToAllTasksClick={handleToAllTasksClick}/> },
+        { symbol: "3", component: <Task taskName={'pig'} handleToAllTasksClick={handleToAllTasksClick}/> },
+        { symbol: "k", component: <Task taskName={'sheep'} handleToAllTasksClick={handleToAllTasksClick}/> },
+        { symbol: "1", component: <Task taskName={'snail'} handleToAllTasksClick={handleToAllTasksClick}/> },
+        { symbol: "9", component: <Task taskName={'tree'} handleToAllTasksClick={handleToAllTasksClick}/> },
+        { symbol: "p", component: <Task taskName={'turtle'} handleToAllTasksClick={handleToAllTasksClick}/> },
+        { symbol: "4", component: <Task taskName={'unicorn'} handleToAllTasksClick={handleToAllTasksClick}/> },
 
     ];
 

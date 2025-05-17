@@ -2,6 +2,9 @@ import {useRef, useState} from "react";
 import {getObjectMedia} from "../../data/tasksMedia";
 import clx from './Task.module.css';
 import {capitalizeFirstLetter} from "../../utils/capitalizeFirstLetter";
+import { IonIcon } from '@ionic/react';
+import { playOutline, pauseOutline, refreshOutline } from 'ionicons/icons';
+import questionSign from '../../images/decor/question.gif';
 
 export const Task = ({handleToAllTasksClick, taskName}) => {
     const audioRef = useRef(null);

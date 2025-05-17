@@ -2,6 +2,7 @@ const OBJECTS = [
     'bear',
     'behemoth',
     'cat',
+    'car',
     'crab',
     'dinosaur',
     'dog',
