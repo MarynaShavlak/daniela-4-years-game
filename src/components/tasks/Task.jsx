@@ -44,6 +44,7 @@ export const Task = ({handleToAllTasksClick, taskName, controlsPos}) => {
     const handleHoverBlockClick = () => {
         // Start fade out animation
         setFadeOut(true);
+        console.log('click on blok')
     };
 
     const handleTransitionEnd = () => {
