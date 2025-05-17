@@ -178,3 +178,31 @@
         }
     }
 }
+
+.questionFox {
+    .hoverBlock {
+        position: absolute;
+        left: calc(100vw - 60vw);
+        bottom:-30vh;
+
+        .hoverImg{
+            width: 42vw;
+            height: 110vh;
+
+        }
+    }
+}
+
+.questionFrog {
+    .hoverBlock {
+        position: absolute;
+        left: -12vw;
+        bottom: -17vh;
+
+        .hoverImg{
+            width: 120vw;
+            height: 80vh;
+
+        }
+    }
+}
