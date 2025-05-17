@@ -10,10 +10,13 @@ export const ProgressSection = ({ progress, totalTasks }) =>
     const girlImages = Array.from({ length: totalTasks }, (_, i) =>
         require(`../../../../shared/assets/images/girl/girl${i + 1}.png`)
     );
+
     const startProgress = 5;
     const endProgress = 100;
     const thresholds = getImageThresholds(girlImages.length, startProgress, endProgress);
-
+    const visibleImagesCount = girlImages.reduce((count, _, index) => {
+        return progress >= thresholds[index] ? count + 1 : count;
+    }, 0);
     return (
         <div className={clx.infoBlock}>
             <div className={clx.progressbarWrapper}>
@@ -32,6 +35,7 @@ export const ProgressSection = ({ progress, totalTasks }) =>
                         src={imgSrc}
                         index={index}
                         isVisible={progress >= thresholds[index]}
+
                         className={clx[`progressImg__girl${index + 1}`]}
                     />
                     )

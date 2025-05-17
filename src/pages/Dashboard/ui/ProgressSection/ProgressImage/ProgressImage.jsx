@@ -2,7 +2,8 @@ import React from "react";
 import clx from "../ProgressSection.module.css";
 
 export const ProgressImage = ({ src, index, isVisible, className = "" }) => {
-    return (
+
+    return  (
         <img
             src={src}
             alt={`Girl ${index + 1} Photo`}
