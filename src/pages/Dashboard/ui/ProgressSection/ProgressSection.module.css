@@ -14,8 +14,6 @@
     top:50%;
     left:50%;
     transform: translate(calc(-50% + 13vw), -50%) rotate(-90deg);
-    /*top: 45vh;*/
-    /*right: -5vw;*/
     div:first-child {
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     }
@@ -27,8 +25,8 @@
     left:50%;
     transform: translate(calc(-50% + 13vw), -50%);
     width: 100px;
-    height: 600px;
-    background-color: green;
+    height: 60vh;
+    /*background-color: green;*/
 
 }
 
@@ -48,3 +46,120 @@
     left:50%;
     transform: translate(-50% , calc(100% - 10vw));
 }
+
+.progressImg__girl2 {
+    top:100%;
+    left:50%;
+    transform: translate(calc(-50% + 6vw) , calc(100% - 13vw));
+
+}
+
+
+.progressImg__girl4 {
+    height: 8vw;
+    top:100%;
+    left:50%;
+    transform: translate(calc(-50% + 7vw) , calc(100% - 16vw));
+}
+
+.progressImg__girl6 {
+    height: 6vw;
+    top:100%;
+    left:50%;
+    transform: translate(calc(-50% + 7vw) , calc(100% - 18vw));
+}
+
+.progressImg__girl8 {
+    height: 6vw;
+    top:100%;
+    left:50%;
+    transform: translate(calc(-50% + 7vw) , calc(100% - 24vw));
+}
+
+.progressImg__girl10 {
+    height: 6vw;
+    top:100%;
+    left:50%;
+    transform: translate(calc(-50% + 7vw) , calc(100% - 30vw));
+}
+
+.progressImg__girl12 {
+    height: 6vw;
+    top:100%;
+    left:50%;
+    transform: translate(calc(-50% + 7vw) , calc(100% - 36vw));
+}
+
+.progressImg__girl14 {
+    height: 6vw;
+    top:100%;
+    left:50%;
+    transform: translate(calc(-50% + 7vw) , calc(100% - 42vw));
+}
+
+.progressImg__girl16 {
+    height: 6vw;
+    top:100%;
+    left:50%;
+    transform: translate(calc(-50% + 6vw) , calc(100% - 48vw));
+}
+
+.progressImg__girl3 {
+    top:100%;
+    left:50%;
+    transform: translate(calc(-50% - 6vw) , calc(100% - 13vw));
+
+}
+
+
+.progressImg__girl5 {
+    height: 7vw;
+    top:100%;
+    left:50%;
+    transform: translate(calc(-50% - 7vw) , calc(100% - 14vw));
+}
+
+.progressImg__girl7 {
+    height: 6vw;
+    top:100%;
+    left:50%;
+    transform: translate(calc(-50% - 7vw) , calc(100% - 18vw));
+}
+
+.progressImg__girl9 {
+    height: 6vw;
+    top:100%;
+    left:50%;
+    transform: translate(calc(-50% - 7vw) , calc(100% - 24vw));
+}
+
+.progressImg__girl11 {
+    height: 6vw;
+    top:100%;
+    left:50%;
+    transform: translate(calc(-50% - 7vw) , calc(100% - 30vw));
+}
+
+.progressImg__girl13 {
+    height: 6vw;
+    top:100%;
+    left:50%;
+    transform: translate(calc(-50% - 7vw) , calc(100% - 36vw));
+}
+
+.progressImg__girl15 {
+    height: 6vw;
+    top:100%;
+    left:50%;
+    transform: translate(calc(-50% - 7vw) , calc(100% - 42vw));
+}
+
+.progressImg__girl17 {
+    height: 6vw;
+    top:100%;
+    left:50%;
+    transform: translate(calc(-50% - 6vw) , calc(100% - 48vw));
+}
+
+
+

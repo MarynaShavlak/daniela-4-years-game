@@ -1,14 +1,18 @@
 import React from "react";
 import { ProgressBar } from "react-step-progress-bar";
 import clx from "./ProgressSection.module.css";
-import girl1 from  '../../../../shared/assets/images/girl/girl1.png'
-import girl18 from  '../../../../shared/assets/images/girl/girl18.png';
 
-export const ProgressSection = ({ progress }) => (
+
+export const ProgressSection = ({ progress }) =>
+{
+    const girlImages = Array.from({ length: 18 }, (_, i) =>
+        require(`../../../../shared/assets/images/girl/girl${i + 1}.png`)
+    );
+    return (
         <div className={clx.infoBlock}>
             <div className={clx.progressbarWrapper}>
                 <ProgressBar
-                    width="600px"
+                    width="60vh"
                     height="60px"
                     percent={progress}
                     filledBackground="#FF191B"
@@ -16,9 +20,15 @@ export const ProgressSection = ({ progress }) => (
 
             </div>
             <div className={clx.imagesWrapper}>
-                <img src={girl1} alt="Girl 1 Photo" className={`${clx.progressImg} ${clx["progressImg__girl1"]}`}/>
-                <img src={girl18} alt="Girl 1 Photo" className={`${clx.progressImg} ${clx["progressImg__girl18"]}`}/>
+                {girlImages.map((imgSrc, index) => (
+                    <img
+                        key={index}
+                        src={imgSrc}
+                        alt={`Girl ${index + 1} Photo`}
+                        className={`${clx.progressImg} ${clx[`progressImg__girl${index + 1}`] || ''}`}
+                    />
+                ))}
             </div>
         </div>
-    )
+    )}
 ;
