@@ -268,3 +268,74 @@
         }
     }
 }
+
+.questionSheep {
+    .hoverBlock {
+        position: absolute;
+        left: -12vw;
+        bottom:-20vh;
+
+        .hoverImg{
+            width: 65vw;
+            height: 140vh;
+
+        }
+    }
+}
+
+.questionSnail {
+    .hoverBlock {
+        position: absolute;
+        left: calc(100vw - 45vw);
+        bottom:-5vh;
+
+        .hoverImg{
+            width: 55vw;
+            height: 80vh;
+
+        }
+    }
+}
+
+
+.questionTree{
+    .hoverBlock {
+        position: absolute;
+        left: calc(100vw - 85vw);
+        bottom:-5vh;
+
+        .hoverImg{
+            width: 50vw;
+            height: 105vh;
+
+        }
+    }
+}
+
+.questionTurtle {
+    .hoverBlock {
+        position: absolute;
+        left: -5vw;
+        bottom:-22vh;
+
+        .hoverImg{
+            width: 50vw;
+            height: 122vh;
+
+        }
+    }
+}
+
+.questionUnicorn{
+    .hoverBlock {
+        position: absolute;
+        left: calc(100vw - 50vw);
+        bottom:0vh;
+
+        .hoverImg{
+            width: 60vw;
+            height: 110vh;
+
+        }
+    }
+}
