@@ -1,0 +1,17 @@
+.listWrapper {
+    z-index:2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 100vh;
+    padding: 30px;
+}
+
+.tasksButtonList {
+    width: 40%;
+}
+
+.tasksButtonListSmall {
+    width: 30%;
+}
