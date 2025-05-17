@@ -35,81 +35,29 @@
     padding: 30px;
 
 }
-.btnList {
-    li {
-        display: flex;
 
-        align-items: flex-end;
-
-
-    }
-
-}
 
 .tasksButtonList {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
     width: 40%;
 }
 
 .tasksButtonListSmall {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    gap:30px;
-    flex-wrap: wrap;
     width: 30%;
-
-
 }
 
-.taskButton {
-  height:130px;
-    cursor: pointer;
-}
 
-.taskButton:hover {
-    filter: drop-shadow(0 0 0.75rem crimson);}
 
-.btn--8 {
-transform: translateX(-20px);
-    height: 110px;
-}
+.progressbarWrapper {
 
-.btn--7 {
-  height: 110px;
-}
-
-.btn--5 {
-    height: 110px;
-}
-
-.btn--3 {
-    height: 110px;
-    transform: translateY(10px);
-}
-
-@media screen and (min-width: 1680px) {
-    .taskButton {
-        height: 180px;
-    }
-    .btn--3, .btn--5 ,.btn--7 ,.btn--8 , .btn--6 , .btn--9{
-        height:160px;
+    /*width:  600px;*/
+    /*height: 100px;*/
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 45vh;
+    right: -5vw;
+    div:first-child {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     }
 }
 
-.symbol {
-    opacity: 1;
-    pointer-events: auto;
-}
 
-.fadeOut {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-}

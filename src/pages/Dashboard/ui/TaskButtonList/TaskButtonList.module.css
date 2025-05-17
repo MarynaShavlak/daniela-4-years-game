@@ -1,0 +1,59 @@
+.btnList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap:30px;
+    flex-wrap: wrap;
+}
+
+
+
+
+.taskButton {
+    height:130px;
+    cursor: pointer;
+}
+
+.taskButton:hover {
+    filter: drop-shadow(0 0 0.75rem crimson);}
+
+.btn--8 {
+    transform: translateX(-20px);
+    height: 110px;
+}
+
+.btn--7 {
+    height: 110px;
+}
+
+.btn--5 {
+    height: 110px;
+}
+
+.btn--3 {
+    height: 110px;
+    transform: translateY(10px);
+}
+
+@media screen and (min-width: 1680px) {
+    .taskButton {
+        height: 180px;
+    }
+    .btn--3, .btn--5 ,.btn--7 ,.btn--8 , .btn--6 , .btn--9{
+        height:160px;
+    }
+}
+
+.symbol {
+    opacity: 1;
+    pointer-events: auto;
+    display: flex;
+    align-items: flex-end;
+}
+
+.fadeOut {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
