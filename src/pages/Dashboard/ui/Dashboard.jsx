@@ -39,7 +39,7 @@ export const Dashboard = () => {
                hiddenSymbols={hiddenSymbols}
                onTaskClick={handleTaskClick}
            />
-           {progress > 0 && <ProgressSection progress={progress} />}
+           {progress > 0 && <ProgressSection progress={progress} totalTasks={TOTAL_TASKS} />}
        </div>
     );
 };
