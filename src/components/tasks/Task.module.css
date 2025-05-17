@@ -150,3 +150,31 @@
         }
     }
 }
+
+.questionCrab {
+    .hoverBlock {
+        position: absolute;
+        left: -8vw;
+        bottom:-7vh;
+
+        .hoverImg{
+            width: 70vw;
+            height: 110vh;
+
+        }
+    }
+}
+
+.questionDinosaur {
+    .hoverBlock {
+        position: absolute;
+        left: calc(100vw - 85vw);
+        bottom:5vh;
+
+        .hoverImg{
+            width: 70vw;
+            height: 120vh;
+
+        }
+    }
+}
