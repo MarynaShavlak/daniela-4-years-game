@@ -206,3 +206,65 @@
         }
     }
 }
+
+.questionGhost{
+    .hoverBlock {
+        position: absolute;
+        left: calc(100vw - 48vw);
+        bottom:-20vh;
+
+        .hoverImg{
+            width: 60vw;
+            height: 115vh;
+
+        }
+    }
+}
+
+.questionIcecream {
+    .hoverBlock {
+        position: absolute;
+        left: -12vw;
+        bottom:-25vh;
+
+        .hoverImg{
+            width: 70vw;
+            height: 120vh;
+
+        }
+    }
+}
+
+.questionMouse {
+    .hoverBlock {
+        position: absolute;
+        left: -10vw;
+        bottom:-10vh;
+
+        .hoverImg{
+            width: 40vw;
+            height: 50vh;
+
+        }
+
+    }
+    .questionSign {
+        height: 20vh;
+        width: auto;
+    }
+}
+
+
+.questionPig {
+    .hoverBlock {
+        position: absolute;
+        left: calc(100vw - 85vw);
+        bottom:-3vh;
+
+        .hoverImg{
+            width: 70vw;
+            height: 100vh;
+
+        }
+    }
+}
