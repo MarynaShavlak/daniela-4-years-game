@@ -1,18 +1,17 @@
 import clx from "./Dashboard.module.css";
 import taskVideo from '../../../shared/assets/video/task.mp4'
-import React from "react";
+import React, {useState} from "react";
 import {Task} from "../../../widgets/Task/ui/Task";
 import {taskImages} from "../../../shared/utils/taskImages";
 
 
 
 export const Dashboard = () => {
-    // State to track the currently displayed task component
-    const [currentTask, setCurrentTask] = React.useState(null);
-
-    // Handler for task button clicks
+    const [currentTask, setCurrentTask] = useState(null);
+    const [hiddenSymbols, setHiddenSymbols] = useState([]);
     const handleTaskClick = (task) => {
         setCurrentTask(task.component);
+        setHiddenSymbols(prev => [...prev, task.symbol]);
     };
 
     const handleToAllTasksClick = (task) => {
@@ -64,6 +63,7 @@ export const Dashboard = () => {
                     <ul  className={`${clx.tasksButtonList} ${clx.btnList}`} >
                         {tasks1.map((task) => (
                             <li
+                                className={`${clx.symbol} ${hiddenSymbols.includes(task.symbol) ? clx.fadeOut : ''}`}
                                 key={task.symbol}
                                 onClick={() => handleTaskClick(task)}
 
@@ -80,6 +80,7 @@ export const Dashboard = () => {
                     <ul className={`${clx.tasksButtonListSmall} ${clx.btnList}`}>
                         {tasks2.map((task) => (
                             <li
+                                className={`${clx.symbol} ${hiddenSymbols.includes(task.symbol) ? clx.fadeOut : ''}`}
                                 key={task.symbol}
                                 onClick={() => handleTaskClick(task)}
                             >
@@ -95,6 +96,7 @@ export const Dashboard = () => {
                     <ul className={`${clx.tasksButtonList} ${clx.btnList}`}>
                         {tasks3.map((task) => (
                             <li
+                                className={`${clx.symbol} ${hiddenSymbols.includes(task.symbol) ? clx.fadeOut : ''}`}
                                 key={task.symbol}
                                 onClick={() => handleTaskClick(task)}
                             >
