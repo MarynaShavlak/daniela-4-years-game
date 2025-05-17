@@ -98,7 +98,7 @@ transform: translateX(-20px);
     .taskButton {
         height: 180px;
     }
-    .btn--3, .btn--5 ,.btn--7 ,.btn--8 , .btn--6 {
+    .btn--3, .btn--5 ,.btn--7 ,.btn--8 , .btn--6 , .btn--9{
         height:160px;
     }
 }
