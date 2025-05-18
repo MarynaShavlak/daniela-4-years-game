@@ -1,10 +1,10 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import screenfull from 'screenfull';
-import { MainPage } from './pages/MainPage/MainPage';
-import { Rules } from './pages/Rules/ui/Rules';
-import {Dashboard} from "./pages/Dashboard/ui/Dashboard";
-import {Final} from "./pages/Dashboard/ui/Final/ui/Final";
+import { MainPage } from '../pages/MainPage/MainPage';
+import { Rules } from '../pages/Rules/ui/Rules';
+import {Dashboard} from "../pages/Dashboard/ui/Dashboard";
+
 
 function App() {
     const appRef = useRef(null);
