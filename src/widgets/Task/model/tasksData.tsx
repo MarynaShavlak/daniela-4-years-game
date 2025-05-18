@@ -1,5 +1,18 @@
-import {Task} from "../../../widgets/Task/ui/Task";
-export const getTasks = (handleToAllTasksClick) => ({
+import {Task} from "../ui/Task";
+import { ReactElement } from 'react';
+
+type TaskItem = {
+    symbol: string;
+    component: ReactElement;
+};
+
+type TasksGroup = {
+    tasks1: TaskItem[];
+    tasks2: TaskItem[];
+    tasks3: TaskItem[];
+};
+
+export const getTasks = (handleToAllTasksClick: () => void): TasksGroup => ({
     tasks1: [
         { symbol: "a", component: <Task taskName="bear" handleToAllTasksClick={handleToAllTasksClick} controlsPos="top-right" /> },
         { symbol: "2", component: <Task taskName="behemoth" handleToAllTasksClick={handleToAllTasksClick} controlsPos="top-right" /> },

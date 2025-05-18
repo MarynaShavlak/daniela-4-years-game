@@ -1,10 +1,7 @@
-type ControlsPosition =
-    | 'top-left'
-    | 'top-right'
-    | 'bottom-left'
-    | 'bottom-right';
+import { Position } from '@/shared/types/position';
+import { CSSProperties } from 'react';
 
-export function getControlPositionStyles(controlsPos: ControlsPosition) {
+export function getControlPositionStyles(controlsPos?: Position): CSSProperties {
     switch (controlsPos) {
         case 'top-left':
             return { position: 'absolute', top: '10px', left: '10px' };

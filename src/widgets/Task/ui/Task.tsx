@@ -1,23 +1,22 @@
-import React, { useState} from "react";
-
 import clx from './Task.module.css';
-
-import questionSign from '../../../shared/assets/images/decor/question.gif'
-import {capitalizeFirstLetter} from "../../../shared/utils/capitalizeFirstLetter";
-import {getObjectMedia} from "../../../shared/utils/tasksMediaManager";
+import { getObjectMedia, ObjectName } from "../../../shared/utils/tasksMediaManager";
 import {getControlPositionStyles} from "../../../shared/utils/getControlPositionStyles";
 import {getAudioBtnsAlignStyle} from "../../../shared/utils/getAudioBtnsAlignStyle";
 import {useAudioPlayer} from "../hooks/useAudioPlayer";
-import {AudioControls} from "../../../features/AudioControls/ui/AudioControls";
-import {Button} from "../../../shared/ui/Button/Button";
+
 import {HoverBlock} from "./HoverBlock/HoverBlock";
 import {TaskControls} from "./TaskControls/TaskControls";
 import {TaskMedia} from "./TaskMedia/TaskMedia";
+import { Position } from '@/shared/types/position';
 
+interface TaskProps {
+    handleToAllTasksClick: ()=> void,
+    taskName: ObjectName,
+    controlsPos?: Position,
+}
 
-
-export const Task = ({handleToAllTasksClick, taskName, controlsPos}) => {
-
+export const Task = (props: TaskProps) => {
+const {handleToAllTasksClick, taskName, controlsPos} = props;
     const media = getObjectMedia(taskName);
     const positionStyles = getControlPositionStyles(controlsPos);
     const audioBtnsAlignStyle = getAudioBtnsAlignStyle(controlsPos);

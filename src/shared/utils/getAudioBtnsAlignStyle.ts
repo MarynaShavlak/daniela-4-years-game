@@ -1,10 +1,7 @@
-type ControlsPosition =
-    | 'top-left'
-    | 'top-right'
-    | 'bottom-left'
-    | 'bottom-right';
+import { Position } from '@/shared/types/position';
 
-export function getAudioBtnsAlignStyle(controlsPos: ControlsPosition) {
+
+export function getAudioBtnsAlignStyle(controlsPos?: Position) {
     switch (controlsPos) {
         case 'top-left':
         case 'bottom-left':

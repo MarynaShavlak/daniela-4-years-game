@@ -65,12 +65,8 @@ const generateMediaObject = (): ObjectsMedia => {
 const objectsMedia: ObjectsMedia = generateMediaObject();
 
 
-export const getObjectMedia = (objectName: ObjectName): MediaObject | null => {
-    if (!objectsMedia[objectName]) {
-        console.error(`Media for ${objectName} not found`);
-        return null;
-    }
-    return objectsMedia[objectName];
+export const getObjectMedia = (objectName: ObjectName): MediaObject  => {
+       return objectsMedia[objectName];
 };
 
 
