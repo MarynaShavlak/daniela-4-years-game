@@ -5,6 +5,7 @@ import rulesVideo from '../../../shared/assets/video/rules.mp4';
 import {Dashboard} from "../../Dashboard/ui/Dashboard";
 import taskVideo from "../../../shared/assets/video/task.mp4";
 import {VideoBackground} from "../../../shared/ui/VideoBackground/VideoBackground";
+import {Button} from "../../../shared/ui/Button/Button";
 
 
 export const Rules = () => {
@@ -20,12 +21,13 @@ export const Rules = () => {
         return (
             <div className={clx.rules}>
                 <VideoBackground id={'rulesVideo'} video={rulesVideo} loop={false} controls={true}/>
-                <button
-                    className={clx.toTasksButton}
+               <Button
                     onClick={handleToTasksClick}
+                    className={clx.toDashboardButton}
+                    size={'m'}
                 >
-                    To Tasks
-                </button>
+                    Перейти до завдань
+                </Button>
             </div>
         );
     };

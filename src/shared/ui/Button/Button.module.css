@@ -2,10 +2,8 @@
     border-radius: 20px;
     background-color: #FF171A;
     color: #111111;
-    font-size: 12px;
     cursor: pointer;
     font-weight: 900;
-    padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     display: flex;
     justify-content: center;
@@ -16,4 +14,19 @@
 .btn:hover {
     color: #FF171A;
     background-color: #111111;
+}
+
+.size_s {
+    font-size: 12px;
+    padding: 10px;
+}
+
+.size_m {
+    font-size: 16px;
+    padding: 20px;
+}
+
+.size_l {
+    font-size: 24px;
+    padding: 30px;
 }
