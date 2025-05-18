@@ -9,7 +9,7 @@ import {TaskControls} from "./TaskControls/TaskControls";
 import {TaskMedia} from "./TaskMedia/TaskMedia";
 import { Position } from '@/shared/types/position';
 
-interface TaskProps {
+export interface TaskProps {
     handleToAllTasksClick: ()=> void,
     taskName: ObjectName,
     controlsPos?: Position,

@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import { getImageThresholds } from "../../../shared/utils/getImageThresholds";
 
 export const useTaskProgress = (
-    currentTask: string | null | undefined,
+    currentTask: ReactElement | null | undefined,
     completedCount: number,
     totalTasks: number
 ): number => {
     const [progress, setProgress] = useState<number>(0);
 
     useEffect(() => {
-        if (!currentTask) {
+        if (!currentTask) {  // no task selected, animate progress
             const targetProgress = Math.min((completedCount / totalTasks) * 100, 100);
             let start = progress;
 

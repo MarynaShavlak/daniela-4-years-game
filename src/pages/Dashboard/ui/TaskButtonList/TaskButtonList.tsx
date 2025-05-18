@@ -1,14 +1,12 @@
 import { taskImages, TaskSymbol } from "../../../../shared/utils/taskImages";
 import clx from './TaskButtonList.module.css'
+import { TaskItem } from '@/widgets/Task/model/tasksData';
 
-interface Task {
-    symbol: TaskSymbol;
- }
 
 interface TaskButtonListProps {
-    tasks: Task[];
+    tasks: TaskItem[];
     hiddenSymbols: string[];
-    onTaskClick: (task: Task) => void;
+    onTaskClick: (task: TaskItem) => void;
     listClass?: string;
 }
 

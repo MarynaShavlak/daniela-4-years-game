@@ -1,12 +1,13 @@
 import {Task} from "../ui/Task";
 import { ReactElement } from 'react';
+import { TaskSymbol } from '@/shared/utils/taskImages';
 
-type TaskItem = {
-    symbol: string;
+export type TaskItem = {
+    symbol: TaskSymbol;
     component: ReactElement;
 };
 
-type TasksGroup = {
+export type TasksGroup = {
     tasks1: TaskItem[];
     tasks2: TaskItem[];
     tasks3: TaskItem[];

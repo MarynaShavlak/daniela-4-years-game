@@ -1,7 +1,7 @@
 import clx from "./Dashboard.module.css";
-import React, {useEffect, useState} from "react";
+import React, { ReactElement, useEffect, useState } from "react";
 import "react-step-progress-bar/styles.css";
-import {getTasks} from "../../../widgets/Task/model/tasksData";
+import { getTasks, TaskItem } from "../../../widgets/Task/model/tasksData";
 import {useTaskProgress} from "../hooks/useTaskProgress";
 import {TaskSection} from "./TaskSection/TaskSection";
 import {ProgressSection} from "./ProgressSection/ProgressSection";
@@ -10,16 +10,16 @@ import taskVideo from '../../../shared/assets/video/task.mp4';
 import {Final} from "./Final/ui/Final";
 import {useAppStore} from "../../../app/store/useAppStore";
 
+
 export const Dashboard = () => {
     const TOTAL_TASKS = 18;
-    const [currentTask, setCurrentTask] = useState(null);
+    const [currentTask, setCurrentTask] = useState<ReactElement | null>(null);
     const [showFinal, setShowFinal] = useState(false);
     const { hiddenSymbols, addHiddenSymbol } = useAppStore();
 
-    const handleTaskClick = (task) => {
+    const handleTaskClick = (task: TaskItem): void => {
         setCurrentTask(task.component);
         addHiddenSymbol(task.symbol);
-
     };
 
     const handleToAllTasksClick = () => {

@@ -1,9 +1,15 @@
 import React, {useEffect, useRef} from "react";
 import clx from "../ProgressSection.module.css";
 
+interface ProgressImageProps {
+    src: string;
+    index: number;
+    isVisible: boolean;
+    className?: string;
+}
 
-export const ProgressImage = ({ src, index, isVisible, className = "",  }) => {
-
+export const ProgressImage = (props: ProgressImageProps ) => {
+const { src, index, isVisible, className = "",  } = props;
     return  (
         <img
             src={src}

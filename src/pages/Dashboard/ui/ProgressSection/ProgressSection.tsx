@@ -5,9 +5,13 @@ import {ProgressImage} from "./ProgressImage/ProgressImage";
 import {useProgressImages} from "../../hooks/useProgressImages";
 import {useProgressAudio} from "../../hooks/useProgressAudio";
 
+interface ProgressSectionProps {
+    progress: number;
+    totalTasks: number;
+}
 
-
-export const ProgressSection = ({ progress, totalTasks }) => {
+export const ProgressSection = (props: ProgressSectionProps) => {
+    const { progress, totalTasks }  = props;
     const {
         girlImages,
         thresholds,

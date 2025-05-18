@@ -1,8 +1,17 @@
 import React from "react";
 import clx from "./TaskSection.module.css";
-import { TaskButtonList } from "../TaskButtonList/TaskButtonList";
+import {  TaskButtonList } from "../TaskButtonList/TaskButtonList";
+import { TaskItem, TasksGroup } from '@/widgets/Task/model/tasksData';
+import { TaskProps } from '@/widgets/Task/ui/Task';
 
-export const TaskSection = ({ tasksGroups, hiddenSymbols, onTaskClick }) => {
+interface TaskSectionProps {
+    tasksGroups: TaskItem[][];
+    hiddenSymbols: string[];
+    onTaskClick: (task: TaskItem) => void;
+}
+
+export const TaskSection = (props: TaskSectionProps) => {
+    const { tasksGroups, hiddenSymbols, onTaskClick } = props;
     const classNames = [clx.tasksButtonList, clx.tasksButtonListSmall, clx.tasksButtonList];
 
 
