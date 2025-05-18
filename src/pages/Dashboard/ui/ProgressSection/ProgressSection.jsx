@@ -1,7 +1,7 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
 import { ProgressBar } from "react-step-progress-bar";
 import clx from "./ProgressSection.module.css";
-import {getImageThresholds} from "../../../../shared/utils/getImageThresholds";
+import {getImageThresholds, useProgressImageIndex} from "../../../../shared/utils/getImageThresholds";
 import {ProgressImage} from "./ProgressImage/ProgressImage";
 
 
@@ -11,12 +11,14 @@ export const ProgressSection = ({ progress, totalTasks }) =>
         require(`../../../../shared/assets/images/girl/girl${i + 1}.png`)
     );
 
-    const startProgress = 5;
+    const startProgress = 100/18;
     const endProgress = 100;
     const thresholds = getImageThresholds(girlImages.length, startProgress, endProgress);
-    const visibleImagesCount = girlImages.reduce((count, _, index) => {
-        return progress >= thresholds[index] ? count + 1 : count;
-    }, 0);
+
+
+    console.log('progress', progress);
+    console.log('thresholds', thresholds);
+
     return (
         <div className={clx.infoBlock}>
             <div className={clx.progressbarWrapper}>
@@ -29,18 +31,23 @@ export const ProgressSection = ({ progress, totalTasks }) =>
 
             </div>
             <div className={clx.imagesWrapper}>
-                {girlImages.map((imgSrc, index) => (
-                    <ProgressImage
-                        key={index}
-                        src={imgSrc}
-                        index={index}
-                        isVisible={progress >= thresholds[index]}
+                {girlImages.map((imgSrc, index) => {
 
-                        className={clx[`progressImg__girl${index + 1}`]}
-                    />
+                    // console.log('thresholds[index]', thresholds[index]);
+                    return (
+                        <ProgressImage
+                            key={index}
+                            src={imgSrc}
+                            index={index}
+                            isVisible={progress >= thresholds[index]}
+                            className={clx[`progressImg__girl${index + 1}`]}
+
+                        />
                     )
+                    }
 
                 )}
+
             </div>
         </div>
     )}
