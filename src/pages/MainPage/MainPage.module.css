@@ -1,6 +1,32 @@
 .initialView {
-    background-image: url("../../shared/assets/images/slides/main.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+
+    background-color: #CAF4FF;
     height: 100vh;
+
+}
+
+.initialView img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    mask-image: linear-gradient(to right, transparent 0, #000 20px, #000 calc(100% - 20px), transparent 100%), linear-gradient(to bottom, transparent 0, #000 20px, #000 calc(100% - 30px), transparent 100%);
+    mask-composite: intersect;
+    height: 95vh;
+}
+
+.initBtn {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    text-transform: uppercase;
+}
+
+.toRulesBtn {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    text-transform: uppercase;
 }

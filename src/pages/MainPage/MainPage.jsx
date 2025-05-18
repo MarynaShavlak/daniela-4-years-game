@@ -1,43 +1,64 @@
 // MainPage.jsx
 import clx from './MainPage.module.css';
-import React, {useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import screenfull from "screenfull";
 import {Rules} from "../Rules/ui/Rules";
-
+import {Button} from "../../shared/ui/Button/Button";
+import mainImg from "../../shared/assets/images/slides/main.jpg"
 
 
 
 export const MainPage = () => {
     const appRef = useRef(null);
     const [showRules, setShowRules] = useState(false);
+    const [isFullscreen, setIsFullscreen] = useState(false);
 
     const toggleFullscreen = () => {
         if (screenfull.isEnabled) {
             screenfull.toggle(appRef.current);
-        } else {
-            alert('Fullscreen not supported');
-        }
-    };
 
+        }
+
+    }
     const handleStartGame = () => {
-        console.log('show rules');
+
         setShowRules(true);
     };
 
+    useEffect(() => {
+        if (!screenfull.isEnabled) return;
+
+        const changeHandler = () => {
+            setIsFullscreen(screenfull.isFullscreen);
+        };
+
+        screenfull.on('change', changeHandler);
+
+        return () => {
+            screenfull.off('change', changeHandler);
+        };
+    }, []);
+
     const InitialView= ()=> {
  return (<div className={clx.initialView}>
-     <button
+     <img src={mainImg }  alt={'Hero image'}/>
+         {!isFullscreen &&<Button
+         size={'l'}
          onClick={toggleFullscreen}
-         style={{
-             marginTop: '20px',
-             padding: '10px 20px',
-             fontSize: '1rem',
-             cursor: 'pointer',
-         }}
+         className={clx.initBtn}
      >
-         Toggle Fullscreen
-     </button>
-     <button onClick={handleStartGame}>Start Game</button>
+         Запуск гри
+     </Button>}
+     {isFullscreen && (
+         <Button
+             size={'l'}
+             onClick={handleStartGame}
+             className={clx.toRulesBtn}
+         >
+             Прослухати правила
+         </Button>
+     )}
+
  </div>)
     }
 
