@@ -1,6 +1,7 @@
 import React from 'react';
 import clx from './Final.module.css';
 import finalVideo from '../../../../../shared/assets/video/final.mp4';
+
 import { VideoBackground } from '../../../../../shared/ui/VideoBackground/VideoBackground';
 
 

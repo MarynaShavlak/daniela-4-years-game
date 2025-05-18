@@ -18,11 +18,15 @@ import imgP from '../assets/images/tablo/p.png';
 import imgC from '../assets/images/tablo/c.png';
 import imgT from '../assets/images/tablo/t.png';
 
-export const taskImages: Record<
+
+export type TaskImages = Record<
     '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' |
     'a' | 'b' | 'k' | 'm' | 'h' | 'p' | 'c' | 't',
     string
-> = {
+>;
+
+export type TaskSymbol = keyof TaskImages;
+export const taskImages: TaskImages  = {
     '0': img0,
     '1': img1,
     '2': img2,

@@ -1,7 +1,20 @@
-import {taskImages} from "../../../../shared/utils/taskImages";
+import { taskImages, TaskSymbol } from "../../../../shared/utils/taskImages";
 import clx from './TaskButtonList.module.css'
 
-export const TaskButtonList = ({ tasks, hiddenSymbols, onTaskClick, listClass }) => (
+interface Task {
+    symbol: TaskSymbol;
+ }
+
+interface TaskButtonListProps {
+    tasks: Task[];
+    hiddenSymbols: string[];
+    onTaskClick: (task: Task) => void;
+    listClass?: string;
+}
+
+export const TaskButtonList = (props: TaskButtonListProps) => {
+    const { tasks, hiddenSymbols, onTaskClick, listClass }= props;
+    return (
     <ul className={`${listClass} ${clx.btnList}`}>
         {tasks.map((task) => (
             <li
@@ -18,4 +31,4 @@ export const TaskButtonList = ({ tasks, hiddenSymbols, onTaskClick, listClass })
             </li>
         ))}
     </ul>
-);
+)};
