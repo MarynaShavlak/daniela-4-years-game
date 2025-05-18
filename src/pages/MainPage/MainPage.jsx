@@ -4,8 +4,6 @@ import { Button } from '../../shared/ui/Button/Button';
 import mainImg from '../../shared/assets/images/slides/main.jpg';
 
 export const MainPage = ({ onShowRules, isFullscreen, toggleFullscreen }) => {
-
-
     return (
 
             <div className={clx.initialView}>

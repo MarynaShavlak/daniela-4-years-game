@@ -4,7 +4,7 @@ import rulesVideo from '../../../shared/assets/video/rules.mp4';
 import { VideoBackground } from '../../../shared/ui/VideoBackground/VideoBackground';
 import { Button } from '../../../shared/ui/Button/Button';
 
-export const Rules = ({ onShowDashboard, onBack }) => {
+export const Rules = ({ onShowDashboard }) => {
     return (
         <div className={clx.rules}>
             <VideoBackground
