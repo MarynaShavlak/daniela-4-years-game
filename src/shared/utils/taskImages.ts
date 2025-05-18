@@ -1,4 +1,3 @@
-
 import img0 from '../assets/images/tablo/0.png';
 import img1 from '../assets/images/tablo/1.png';
 import img2 from '../assets/images/tablo/2.png';
@@ -19,7 +18,11 @@ import imgP from '../assets/images/tablo/p.png';
 import imgC from '../assets/images/tablo/c.png';
 import imgT from '../assets/images/tablo/t.png';
 
-export const taskImages = {
+export const taskImages: Record<
+    '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' |
+    'a' | 'b' | 'k' | 'm' | 'h' | 'p' | 'c' | 't',
+    string
+> = {
     '0': img0,
     '1': img1,
     '2': img2,

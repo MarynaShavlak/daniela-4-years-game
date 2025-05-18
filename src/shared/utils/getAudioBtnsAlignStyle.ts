@@ -1,5 +1,10 @@
+type ControlsPosition =
+    | 'top-left'
+    | 'top-right'
+    | 'bottom-left'
+    | 'bottom-right';
 
-export function getAudioBtnsAlignStyle(controlsPos) {
+export function getAudioBtnsAlignStyle(controlsPos: ControlsPosition) {
     switch (controlsPos) {
         case 'top-left':
         case 'bottom-left':

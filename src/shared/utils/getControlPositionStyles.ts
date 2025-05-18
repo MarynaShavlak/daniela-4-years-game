@@ -1,4 +1,10 @@
-export function getControlPositionStyles(controlsPos) {
+type ControlsPosition =
+    | 'top-left'
+    | 'top-right'
+    | 'bottom-left'
+    | 'bottom-right';
+
+export function getControlPositionStyles(controlsPos: ControlsPosition) {
     switch (controlsPos) {
         case 'top-left':
             return { position: 'absolute', top: '10px', left: '10px' };

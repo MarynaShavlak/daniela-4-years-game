@@ -17,7 +17,7 @@ function App() {
 
     const toggleFullscreen = () => {
         if (screenfull.isEnabled) {
-            screenfull.toggle(appRef.current);
+            screenfull.toggle(appRef.current ?? undefined);
         }
     };
 
