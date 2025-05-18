@@ -1,14 +1,17 @@
 import { useEffect, useRef, useState } from "react";
 
-export const useProgressAudio = (visibleImagesCount) => {
-    const [audioToPlay, setAudioToPlay] = useState(null);
-    const prevVisibleImagesCountRef = useRef(0);
-    const currentAudioRef = useRef(null);
-    const audioTimeoutRef = useRef(null);
+export const useProgressAudio = (visibleImagesCount: number): void => {
+    const [audioToPlay, setAudioToPlay] = useState<number | null>(null);
+    const prevVisibleImagesCountRef = useRef<number>(0);
+    const currentAudioRef = useRef<HTMLAudioElement | null>(null);
+    const audioTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     // Update audioToPlay when visibleImagesCount changes
     useEffect(() => {
-        if (visibleImagesCount >= 1 && prevVisibleImagesCountRef.current < visibleImagesCount) {
+        if (
+            visibleImagesCount >= 1 &&
+            prevVisibleImagesCountRef.current < visibleImagesCount
+        ) {
             setAudioToPlay(visibleImagesCount);
         }
 
@@ -26,7 +29,6 @@ export const useProgressAudio = (visibleImagesCount) => {
         if (audioToPlay === null) return;
 
         if (audioTimeoutRef.current) {
-            console.log("Clearing previous timeout");
             clearTimeout(audioTimeoutRef.current);
         }
 
@@ -37,21 +39,16 @@ export const useProgressAudio = (visibleImagesCount) => {
                     currentAudioRef.current = null;
                 }
 
-                const audioPath = require(`../../../shared/assets/audio/greeting/${audioToPlay}.m4a`);
+                const audioPath: string = require(`../../../shared/assets/audio/greeting/${audioToPlay}.m4a`);
                 const audio = new Audio(audioPath);
                 currentAudioRef.current = audio;
 
-                audio
-                    .play()
-                    .then(() => {
-
-                    })
-                    .catch((error) => {
-                        console.error(`Audio playback failed for index ${audioToPlay}:`, error);
-                        if (error.name === "NotAllowedError") {
-                            console.warn("Autoplay blocked. User interaction may be required.");
-                        }
-                    });
+                audio.play().catch((error) => {
+                    console.error(`Audio playback failed for index ${audioToPlay}:`, error);
+                    if (error.name === "NotAllowedError") {
+                        console.warn("Autoplay blocked. User interaction may be required.");
+                    }
+                });
             } catch (error) {
                 console.error(`Could not load audio file for index ${audioToPlay}:`, error);
             }

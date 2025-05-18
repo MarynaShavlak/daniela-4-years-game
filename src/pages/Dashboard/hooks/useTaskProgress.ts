@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
-import {getImageThresholds} from "../../../shared/utils/getImageThresholds";
+import { getImageThresholds } from "../../../shared/utils/getImageThresholds";
 
-export const useTaskProgress = (currentTask, completedCount, totalTasks) => {
-    const [progress, setProgress] = useState(0);
+export const useTaskProgress = (
+    currentTask: string | null | undefined,
+    completedCount: number,
+    totalTasks: number
+): number => {
+    const [progress, setProgress] = useState<number>(0);
 
     useEffect(() => {
         if (!currentTask) {
@@ -11,7 +15,7 @@ export const useTaskProgress = (currentTask, completedCount, totalTasks) => {
 
             if (targetProgress > start) {
                 const step = () => {
-                    const imageThresholds = getImageThresholds(totalTasks, 100/totalTasks, 100);
+                    const imageThresholds = getImageThresholds(totalTasks, 100 / totalTasks, 100);
                     const stepSize = imageThresholds[1] - imageThresholds[0];
 
                     start += stepSize;

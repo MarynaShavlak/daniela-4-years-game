@@ -3,7 +3,7 @@ import { ProgressBar } from "react-step-progress-bar";
 import clx from "./ProgressSection.module.css";
 import {ProgressImage} from "./ProgressImage/ProgressImage";
 import {useProgressImages} from "../../hooks/useProgressImages";
-import {useProgressAudio} from "../../hooks/ useProgressAudio";
+import {useProgressAudio} from "../../hooks/useProgressAudio";
 
 
 

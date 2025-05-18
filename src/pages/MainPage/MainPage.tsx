@@ -5,17 +5,14 @@ import mainImg from '../../shared/assets/images/slides/main.jpg';
 import startAudio from '../../shared/assets/audio/start.mp3';
 import {useAppStore} from "../../app/store/useAppStore";
 
-export const MainPage = ({  toggleFullscreen }) => {
-    const {
-        isRulesShown,
-        isDashboardShown,
+interface MainPageProps {
+    toggleFullscreen: () => void;
+}
 
-        setIsFullscreen,
-        isFullscreen,
-        showRules,
-        showDashboard,
-    } = useAppStore();
-    const audioRef = useRef(null);
+export const MainPage = (props: MainPageProps ) => {
+    const {  toggleFullscreen } = props;
+    const { isFullscreen, showRules } = useAppStore();
+    const audioRef = useRef<HTMLAudioElement | null>(null);
     const handleStartClick = () => {
 
         if (audioRef.current) {
