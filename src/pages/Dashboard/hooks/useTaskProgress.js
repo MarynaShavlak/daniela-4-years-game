@@ -7,17 +7,16 @@ export const useTaskProgress = (currentTask, completedCount, totalTasks) => {
     useEffect(() => {
         if (!currentTask) {
             const targetProgress = Math.min((completedCount / totalTasks) * 100, 100);
-            console.log('targetProgress', targetProgress);
             let start = progress;
 
             if (targetProgress > start) {
                 const step = () => {
                     const imageThresholds = getImageThresholds(totalTasks, 100/totalTasks, 100);
                     const stepSize = imageThresholds[1] - imageThresholds[0];
-                    console.log('stepSize',stepSize)
+
                     start += stepSize;
                     if (start + stepSize >= targetProgress) {
-                        setProgress(targetProgress); // ensure it reaches exact target
+                        setProgress(targetProgress);
                     } else {
                         start += stepSize;
                         setProgress(start);

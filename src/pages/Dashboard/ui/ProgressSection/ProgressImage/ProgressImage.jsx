@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
 import clx from "../ProgressSection.module.css";
 
-export const ProgressImage = ({ src, index, isVisible, className = "" }) => {
+
+export const ProgressImage = ({ src, index, isVisible, className = "",  }) => {
 
     return  (
         <img
