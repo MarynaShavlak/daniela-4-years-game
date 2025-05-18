@@ -1,14 +1,10 @@
 import clx from "./Dashboard.module.css";
-import React, {useEffect, useRef, useState} from "react";
+import React, { useState} from "react";
 import "react-step-progress-bar/styles.css";
-import { ProgressBar } from "react-step-progress-bar";
 import {getTasks} from "../../../widgets/Task/model/tasksData";
-import {TaskButtonList} from "./TaskButtonList/TaskButtonList";
 import {useTaskProgress} from "../hooks/useTaskProgress";
-
 import {TaskSection} from "./TaskSection/TaskSection";
 import {ProgressSection} from "./ProgressSection/ProgressSection";
-import audio1 from '../../../shared/assets/audio/greeting/1.m4a'
 import {VideoBackground} from "../../../shared/ui/VideoBackground/VideoBackground";
 import taskVideo from '../../../shared/assets/video/task.mp4';
 

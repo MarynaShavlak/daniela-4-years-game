@@ -3,11 +3,20 @@ import React, { useEffect, useRef, useState } from 'react';
 import screenfull from 'screenfull';
 import { MainPage } from './pages/MainPage/MainPage';
 import { Rules } from './pages/Rules/ui/Rules';
+import {Dashboard} from "./pages/Dashboard/ui/Dashboard";
 
 function App() {
     const appRef = useRef(null);
     const [showRules, setShowRules] = useState(false);
     const [isFullscreen, setIsFullscreen] = useState(false);
+    const [showDashboard, setShowDashboard] = useState(false);
+
+    const handleToDashboard = () => {
+        setShowDashboard(true);
+    };
+    const handleToRules= () => {
+        setShowRules(true);
+    };
 
     const toggleFullscreen = () => {
         if (screenfull.isEnabled) {
@@ -31,11 +40,15 @@ function App() {
 
     return (
         <div ref={appRef}>
-            {showRules ? (
-                <Rules onBack={() => setShowRules(false)} />
+            {showDashboard ? (
+                <Dashboard />
+            ) : showRules ? (
+                <Rules
+                    onShowDashboard={handleToDashboard}
+                />
             ) : (
                 <MainPage
-                    onShowRules={() => setShowRules(true)}
+                    onShowRules={handleToRules}
                     isFullscreen={isFullscreen}
                     toggleFullscreen={toggleFullscreen}
                 />
