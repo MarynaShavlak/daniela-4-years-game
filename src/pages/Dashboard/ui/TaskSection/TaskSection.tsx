@@ -32,3 +32,4 @@ export const TaskSection = (props: TaskSectionProps) => {
         </div>
     );
 };
+

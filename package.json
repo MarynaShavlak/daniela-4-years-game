@@ -13,6 +13,7 @@
     "@types/react": "^19.1.4",
     "@types/react-dom": "^19.1.5",
     "fireworks-js": "^2.10.8",
+    "framer-motion": "^12.12.1",
     "ionicons": "^8.0.8",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

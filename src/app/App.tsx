@@ -1,11 +1,10 @@
-
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import screenfull from 'screenfull';
 import { MainPage } from '../pages/MainPage/MainPage';
 import { Rules } from '../pages/Rules/ui/Rules';
-import {Dashboard} from "../pages/Dashboard/ui/Dashboard";
-import {useAppStore} from "./store/useAppStore";
-
+import { Dashboard } from "../pages/Dashboard/ui/Dashboard";
+import { useAppStore } from "./store/useAppStore";
+import { motion, AnimatePresence } from 'framer-motion';
 
 function App() {
     const appRef = useRef(null);
@@ -35,16 +34,28 @@ function App() {
         }
     }, [setIsFullscreen]);
 
+    const currentPageKey = isDashboardShown ? "dashboard" : isRulesShown ? "rules" : "main";
+
     const renderPage = () => {
         if (isDashboardShown) return <Dashboard />;
         if (isRulesShown) return <Rules />;
         return <MainPage toggleFullscreen={toggleFullscreen} />;
     };
 
-
     return (
-        <div ref={appRef}>
-            {renderPage()}
+        <div ref={appRef} style={{ position: 'relative' }}>
+            <AnimatePresence mode="wait">
+                <motion.div
+                    key={currentPageKey}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.4 }}
+                    style={{ position: 'absolute', width: '100%' }}
+                >
+                    {renderPage()}
+                </motion.div>
+            </AnimatePresence>
         </div>
     );
 }
