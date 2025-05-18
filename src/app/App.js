@@ -4,20 +4,16 @@ import screenfull from 'screenfull';
 import { MainPage } from '../pages/MainPage/MainPage';
 import { Rules } from '../pages/Rules/ui/Rules';
 import {Dashboard} from "../pages/Dashboard/ui/Dashboard";
+import {useAppStore} from "./store/useAppStore";
 
 
 function App() {
     const appRef = useRef(null);
-    const [showRules, setShowRules] = useState(false);
-    const [isFullscreen, setIsFullscreen] = useState(false);
-    const [showDashboard, setShowDashboard] = useState(false);
-
-    const handleToDashboard = () => {
-        setShowDashboard(true);
-    };
-    const handleToRules= () => {
-        setShowRules(true);
-    };
+    const {
+        isRulesShown,
+        isDashboardShown,
+        setIsFullscreen,
+    } = useAppStore();
 
     const toggleFullscreen = () => {
         if (screenfull.isEnabled) {
@@ -26,35 +22,29 @@ function App() {
     };
 
     useEffect(() => {
-        if (!screenfull.isEnabled) return;
-
-        const changeHandler = () => {
+        const handleFullscreenChange = () => {
             setIsFullscreen(screenfull.isFullscreen);
         };
 
-        screenfull.on('change', changeHandler);
+        if (screenfull.isEnabled) {
+            screenfull.on('change', handleFullscreenChange);
 
-        return () => {
-            screenfull.off('change', changeHandler);
-        };
-    }, []);
+            return () => {
+                screenfull.off('change', handleFullscreenChange);
+            };
+        }
+    }, [setIsFullscreen]);
+
+    const renderPage = () => {
+        if (isDashboardShown) return <Dashboard />;
+        if (isRulesShown) return <Rules />;
+        return <MainPage toggleFullscreen={toggleFullscreen} />;
+    };
 
 
     return (
         <div ref={appRef}>
-            {showDashboard ? (
-                <Dashboard />
-            ) : showRules ? (
-                <Rules
-                    onShowDashboard={handleToDashboard}
-                />
-            ) : (
-                <MainPage
-                    onShowRules={handleToRules}
-                    isFullscreen={isFullscreen}
-                    toggleFullscreen={toggleFullscreen}
-                />
-            )}
+            {renderPage()}
         </div>
     );
 }

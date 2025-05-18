@@ -3,9 +3,18 @@ import React, { useRef} from 'react';
 import { Button } from '../../shared/ui/Button/Button';
 import mainImg from '../../shared/assets/images/slides/main.jpg';
 import startAudio from '../../shared/assets/audio/start.mp3';
+import {useAppStore} from "../../app/store/useAppStore";
 
-export const MainPage = ({ onShowRules, isFullscreen, toggleFullscreen }) => {
+export const MainPage = ({  toggleFullscreen }) => {
+    const {
+        isRulesShown,
+        isDashboardShown,
 
+        setIsFullscreen,
+        isFullscreen,
+        showRules,
+        showDashboard,
+    } = useAppStore();
     const audioRef = useRef(null);
     const handleStartClick = () => {
 
@@ -34,7 +43,7 @@ export const MainPage = ({ onShowRules, isFullscreen, toggleFullscreen }) => {
             {isFullscreen && (
                 <Button
                     size="l"
-                    onClick={onShowRules}
+                    onClick={showRules}
                     className={clx.toRulesBtn}
                 >
                     Прослухати правила

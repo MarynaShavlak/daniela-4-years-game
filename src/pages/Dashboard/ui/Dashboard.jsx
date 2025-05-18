@@ -8,17 +8,18 @@ import {ProgressSection} from "./ProgressSection/ProgressSection";
 import {VideoBackground} from "../../../shared/ui/VideoBackground/VideoBackground";
 import taskVideo from '../../../shared/assets/video/task.mp4';
 import {Final} from "./Final/ui/Final";
+import {useAppStore} from "../../../app/store/useAppStore";
 
 export const Dashboard = () => {
     const TOTAL_TASKS = 18;
     const [currentTask, setCurrentTask] = useState(null);
-     const [hiddenSymbols, setHiddenSymbols] = useState([]);
     const [showFinal, setShowFinal] = useState(false);
-
+    const { hiddenSymbols, addHiddenSymbol } = useAppStore();
 
     const handleTaskClick = (task) => {
         setCurrentTask(task.component);
-        setHiddenSymbols(prev => [...prev, task.symbol]);
+        addHiddenSymbol(task.symbol);
+
     };
 
     const handleToAllTasksClick = () => {
@@ -31,7 +32,7 @@ export const Dashboard = () => {
     useEffect(() => {
         if (hiddenSymbols.length === TOTAL_TASKS) {
             const timer = setTimeout(() => setShowFinal(true), 10000);
-            return () => clearTimeout(timer); // Cleanup on unmount or condition change
+            return () => clearTimeout(timer);
         }
     }, [hiddenSymbols.length]);
     if (currentTask) return currentTask;

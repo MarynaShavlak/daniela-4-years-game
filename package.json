@@ -16,7 +16,8 @@
     "react-scripts": "5.0.1",
     "react-step-progress-bar": "^1.0.3",
     "screenfull": "^6.0.2",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "zustand": "^5.0.4"
   },
   "scripts": {
     "start": "react-scripts start",
