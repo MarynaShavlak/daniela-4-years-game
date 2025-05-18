@@ -2,7 +2,8 @@
 import clx from './MainPage.module.css';
 import React, {useRef, useState} from 'react';
 import screenfull from "screenfull";
-import {Rules} from "../Rules/Rules";
+import {Rules} from "../Rules/ui/Rules";
+
 
 
 
