@@ -32,7 +32,6 @@ const {handleToAllTasksClick, taskName, controlsPos} = props;
 
     return (
         <div className={clx.question}>
-            {/*<TaskMedia videoSrc={media.video} audioSrc={media.audio} audioRef={audioRef} />*/}
             <TaskMedia videoSrc={media.video} />
             <TaskControls
                 handleToAllTasksClick={handleToAllTasksClick}
