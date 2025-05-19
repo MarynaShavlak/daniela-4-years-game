@@ -1,7 +1,7 @@
 import clx from './Task.module.css';
-import { getObjectMedia, ObjectName } from "../../../shared/utils/tasksMediaManager";
-import {getControlPositionStyles} from "../../../shared/utils/getControlPositionStyles";
-import {getAudioBtnsAlignStyle} from "../../../shared/utils/getAudioBtnsAlignStyle";
+import { getObjectMedia, ObjectName } from "@/shared/utils/tasksMediaManager";
+import {getControlPositionStyles} from "@/shared/utils/getControlPositionStyles";
+import {getAudioBtnsAlignStyle} from "@/shared/utils/getAudioBtnsAlignStyle";
 import {useAudioPlayer} from "../hooks/useAudioPlayer";
 
 import {HoverBlock} from "./HoverBlock/HoverBlock";

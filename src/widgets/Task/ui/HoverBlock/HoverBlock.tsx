@@ -3,8 +3,8 @@ import clx from './HoverBlock.module.css';
 import { useWindowSize } from 'react-use'
 import Confetti from 'react-confetti'
 
-import questionSign from '../../../../shared/assets/images/decor/question.gif';
-import { capitalizeFirstLetter } from "../../../../shared/utils/capitalizeFirstLetter";
+import questionSign from '@/shared/assets/images/decor/question.gif';
+import { capitalizeFirstLetter } from "@/shared/utils/capitalizeFirstLetter";
 import { ObjectName } from '@/shared/utils/tasksMediaManager';
 
 import { motion, AnimatePresence } from "framer-motion";

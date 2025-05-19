@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import screenfull from 'screenfull';
-import { MainPage } from '../pages/MainPage/MainPage';
-import { Rules } from '../pages/Rules/ui/Rules';
-import { Dashboard } from "../pages/Dashboard/ui/Dashboard";
+import { MainPage } from '@/pages/MainPage';
+import { Rules } from '@/pages/Rules';
+import { Dashboard } from "@/pages/Dashboard";
 import { useAppStore } from "./store/useAppStore";
 import { motion, AnimatePresence } from 'framer-motion';
 

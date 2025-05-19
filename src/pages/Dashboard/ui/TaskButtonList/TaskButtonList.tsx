@@ -1,4 +1,4 @@
-import { taskImages, TaskSymbol } from "../../../../shared/utils/taskImages";
+import { taskImages } from "@/shared/utils/taskImages";
 import clx from './TaskButtonList.module.css'
 import { TaskItem } from '@/widgets/Task/model/tasksData';
 

@@ -1,9 +1,7 @@
 import React, { CSSProperties } from "react";
 import clx from './TaskControls.module.css';
-import { Button } from "../../../../shared/ui/Button/Button";
-import { AudioControls } from '../../../../features/AudioControls/ui/AudioControls';
-import { Position } from '@/shared/types/position';
-
+import { Button } from "@/shared/ui/Button";
+import { AudioControls } from '@/features/AudioControls';
 
 
 interface TaskControlsProps {

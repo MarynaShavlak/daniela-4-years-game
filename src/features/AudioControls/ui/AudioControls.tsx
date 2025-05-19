@@ -2,7 +2,7 @@ import React, { CSSProperties } from 'react';
 import { IonIcon } from '@ionic/react';
 import { playOutline, pauseOutline, refreshOutline } from 'ionicons/icons';
 import clx from './AudioControls.module.css';
-import {Button} from "../../../shared/ui/Button/Button";
+import { Button } from "@/shared/ui/Button";
 
 interface AudioControlsProps {
     isPlaying: boolean;

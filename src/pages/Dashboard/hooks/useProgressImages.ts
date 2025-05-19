@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import {getImageThresholds} from "../../../shared/utils/getImageThresholds";
+import {getImageThresholds} from "@/shared/utils/getImageThresholds";
 
 
 interface UseProgressImagesResult {

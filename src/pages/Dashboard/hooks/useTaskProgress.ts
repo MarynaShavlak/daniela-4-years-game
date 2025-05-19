@@ -1,5 +1,5 @@
 import { ReactElement, useEffect, useState } from "react";
-import { getImageThresholds } from "../../../shared/utils/getImageThresholds";
+import { getImageThresholds } from "@/shared/utils/getImageThresholds";
 
 export const useTaskProgress = (
     currentTask: ReactElement | null | undefined,

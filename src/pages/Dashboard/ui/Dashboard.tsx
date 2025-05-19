@@ -1,14 +1,14 @@
 import clx from "./Dashboard.module.css";
 import React, { ReactElement, useEffect, useState } from "react";
 import "react-step-progress-bar/styles.css";
-import { getTasks, TaskItem } from "../../../widgets/Task/model/tasksData";
+import { getTasks, TaskItem } from "@/widgets/Task/model/tasksData";
 import { useTaskProgress } from "../hooks/useTaskProgress";
 import { TaskSection } from "./TaskSection/TaskSection";
 import { ProgressSection } from "./ProgressSection/ProgressSection";
-import { VideoBackground } from "../../../shared/ui/VideoBackground/VideoBackground";
-import taskVideo from '../../../shared/assets/video/task.mp4';
+import { VideoBackground } from "@/shared/ui/VideoBackground/VideoBackground";
+import taskVideo from '@/shared/assets/video/task.mp4';
 import { Final } from "./Final/ui/Final";
-import { useAppStore } from "../../../app/store/useAppStore";
+import { useAppStore } from "@/app/store/useAppStore";
 
 import { motion, AnimatePresence } from "framer-motion";
 

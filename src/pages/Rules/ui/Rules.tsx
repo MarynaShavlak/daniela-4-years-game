@@ -1,9 +1,9 @@
 import React from 'react';
 import clx from './Rules.module.css';
-import rulesVideo from '../../../shared/assets/video/rules.mp4';
-import { VideoBackground } from '../../../shared/ui/VideoBackground/VideoBackground';
-import { Button } from '../../../shared/ui/Button/Button';
-import {useAppStore} from "../../../app/store/useAppStore";
+import rulesVideo from '@/shared/assets/video/rules.mp4';
+import { VideoBackground } from '@/shared/ui/VideoBackground';
+import { Button } from '@/shared/ui/Button';
+import {useAppStore} from "@/app/store/useAppStore";
 
 export const Rules = () => {
     const { showDashboard } = useAppStore();

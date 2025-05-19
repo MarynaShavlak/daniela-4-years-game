@@ -1,4 +1,3 @@
-import React, {useEffect, useRef} from "react";
 import clx from "../ProgressSection.module.css";
 
 interface ProgressImageProps {

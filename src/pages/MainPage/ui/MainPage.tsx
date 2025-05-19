@@ -1,9 +1,9 @@
 import clx from './MainPage.module.css';
 import React, { useRef} from 'react';
-import { Button } from '../../shared/ui/Button/Button';
-import mainImg from '../../shared/assets/images/slides/main.jpg';
-import startAudio from '../../shared/assets/audio/start.mp3';
-import {useAppStore} from "../../app/store/useAppStore";
+import { Button } from '@/shared/ui/Button';
+import mainImg from '@/shared/assets/images/slides/main.jpg';
+import startAudio from '@/shared/assets/audio/start.mp3';
+import {useAppStore} from "@/app/store/useAppStore";
 
 interface MainPageProps {
     toggleFullscreen: () => void;
