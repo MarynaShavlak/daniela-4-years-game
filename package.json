@@ -2,6 +2,7 @@
   "name": "daniela-4-years-game",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://MarynaShavlak.github.io/daniela-4-years-game",
   "dependencies": {
     "@craco/craco": "^7.1.0",
     "@ionic/react": "^8.5.7",
@@ -31,6 +32,8 @@
     "zustand": "^5.0.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "craco  start",
     "build": "craco  build",
     "test": "craco  test",
@@ -55,6 +58,7 @@
     ]
   },
   "devDependencies": {
-    "@types/howler": "^2.2.12"
+    "@types/howler": "^2.2.12",
+    "gh-pages": "^6.3.0"
   }
 }
