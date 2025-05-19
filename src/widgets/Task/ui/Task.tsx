@@ -26,15 +26,14 @@ const {handleToAllTasksClick, taskName, controlsPos} = props;
         isPlaying,
         toggleAudio,
         replayAudio
-    } = useAudioPlayer(true);
+    } = useAudioPlayer(media.audio || '', true);
 
-    if (!media) {
-        return <div>No media found for `${taskName}`</div>;
-    }
+
 
     return (
         <div className={clx.question}>
-            <TaskMedia videoSrc={media.video} audioSrc={media.audio} audioRef={audioRef} />
+            {/*<TaskMedia videoSrc={media.video} audioSrc={media.audio} audioRef={audioRef} />*/}
+            <TaskMedia videoSrc={media.video} />
             <TaskControls
                 handleToAllTasksClick={handleToAllTasksClick}
                 positionStyles={positionStyles}
