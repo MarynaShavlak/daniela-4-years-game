@@ -31,48 +31,38 @@ export const Dashboard = () => {
 
     const handleToAllTasksClick = () => {
         setCurrentTask(null);
+        if (hiddenSymbols.length === (TOTAL_TASKS-1)) {
+            const timer = setTimeout(() => setShowFinal(true), 10000);
+            return () => clearTimeout(timer);
+        }
     };
 
     const progress = useTaskProgress(currentTask, hiddenSymbols.length, TOTAL_TASKS);
 
     const { tasks1, tasks2, tasks3 } = getTasks(handleToAllTasksClick);
 
-    useEffect(() => {
-        if (hiddenSymbols.length === TOTAL_TASKS) {
-            const timer = setTimeout(() => setShowFinal(true), 10000);
-            return () => clearTimeout(timer);
-        }
-    }, [hiddenSymbols.length]);
+
+    if (currentTask) return (<AnimatePresence>
+        <motion.div
+        key="task"
+        variants={fadeVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        transition={{duration: 0.5}}
+    >
+        {currentTask}
+    </motion.div>
+    </AnimatePresence>)
+
+    if (showFinal) return <Final/>;
 
     return (
         <div className={clx.tasks}>
-            <VideoBackground id={'tasksVideo'} video={taskVideo} />
+            <VideoBackground id={'tasksVideo'} video={taskVideo}/>
 
-            <AnimatePresence >
-                {currentTask ? (
-                    <motion.div
-                        key="task"
-                        variants={fadeVariants}
-                        initial="hidden"
-                        animate="visible"
-                        exit="exit"
-                        transition={{ duration: 0.5 }}
-                    >
-                        {currentTask}
-                    </motion.div>
-                ) : showFinal ? (
-                    <motion.div
-                        key="final"
-                        variants={fadeVariants}
-                        initial="hidden"
-                        animate="visible"
-                        exit="exit"
-                        transition={{ duration: 0.5 }}
-                    >
-                        <Final />
-                    </motion.div>
-                ) : (
-                    <motion.div
+            <AnimatePresence>
+                        <motion.div
                         key="taskSection"
                         variants={fadeVariants}
                         initial="hidden"
@@ -89,7 +79,7 @@ export const Dashboard = () => {
                             <ProgressSection progress={progress} totalTasks={TOTAL_TASKS} />
                         )}
                     </motion.div>
-                )}
+
             </AnimatePresence>
         </div>
     );

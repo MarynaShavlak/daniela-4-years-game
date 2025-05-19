@@ -13,6 +13,7 @@ export const Final = () => {
                 video={finalVideo}
                 loop={false}
                 controls={false}
+                muted={false}
             />
 
         </div>

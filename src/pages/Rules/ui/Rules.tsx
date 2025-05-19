@@ -14,6 +14,7 @@ export const Rules = () => {
                 video={rulesVideo}
                 loop={false}
                 controls={true}
+                muted={false}
             />
             <Button
                 onClick={ showDashboard}
