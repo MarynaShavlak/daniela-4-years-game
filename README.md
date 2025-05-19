@@ -1,6 +1,10 @@
 # Happy Birthday Riddle Quest 🎉
 
-![poster](poster.jpg)
+
+
+https://github.com/user-attachments/assets/ebbe24db-1a22-434a-b9a9-593f708958a2
+
+
 
 ## Live Website
 
