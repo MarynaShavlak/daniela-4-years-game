@@ -1,70 +1,131 @@
-# Getting Started with Create React App
+# Happy Birthday Riddle Quest 🎉
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![poster](poster.jpg)
 
-## Available Scripts
+## Live Website
 
-In the project directory, you can run:
+- 🌐 **Visit Here:** [Happy Birthday Riddle Quest](https://marynashavlak.github.io/daniela-4-years-game/)
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Industry:** Web Games  
+**Type:** Individual Project  
+**Categories:** React, TypeScript, Web Games  
+**Date:** 2025  
+**Timeline:** 1 week  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Description
 
-### `npm test`
+**Happy Birthday Riddle Quest** is a magical fullscreen web game designed to celebrate the 4th birthday of a little girl named Daniela. The game merges digital interactivity with real-world excitement, guiding Daniela through a whimsical journey filled with her favorite cartoon heroes, riddles, and surprise rewards. Each task is connected to a physical box of 18 decorated compartments, creating a truly immersive experience.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+### 🗣 Ukrainian Language Support
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Full interface, text, and audio content in Ukrainian.
+- Tailored for young Ukrainian-speaking children.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🖥️ Immersive Fullscreen Experience
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Runs in fullscreen, hiding browser UI for immersion.
+- Customized with Daniela’s favorite cartoon characters and videos from Lady Bug.
 
-### `npm run eject`
+### 🧩 Real-World and Digital Sync
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Connected to a handcrafted box with 18 marked compartments.
+- Each in-game selection corresponds to a physical symbol Daniela opens.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🧠 Riddle-Solving Tasks
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Cartoon scenes covered by white overlays.
+- Audio and text clues help guess the hidden character or object.
+- Includes play, pause, and replay controls for accessibility.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 🎉 Interactive Reveal and Rewards
 
-## Learn More
+- Clicking reveals the answer with confetti and fireworks.
+- Real-life gingerbread or gifts match the digital surprise.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 📈 Progress Tracking and Motivation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Progress bar updates after each task.
+- Achievement photos of Daniela shown after each solved puzzle.
+- Motivating voice messages from Lady Bug become more exciting with each win.
 
-### Code Splitting
+### 🎊 Final Celebration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Finishes with a dance video from Lady Bug after all 18 puzzles are solved.
+- Full visual, audio, and physical reward experience.
 
-### Analyzing the Bundle Size
+## Tech Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Architecture
 
-### Making a Progressive Web App
+- Feature-Sliced Design
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Frontend
 
-### Advanced Configuration
+- React  
+- TypeScript  
+- Zustand
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Styling
 
-### Deployment
+- CSS Modules
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Effects
 
-### `npm run build` fails to minify
+- Framer Motion  
+- React Confetti  
+- react-step-progress-bar
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### UI Libraries
+
+- ionicons
+
+### Media & Audio
+
+- Howler.js  
+- react-player
+
+### Utilities
+
+- react-use  
+- screenfull
+
+## Skills Demonstrated
+
+- TypeScript & React.js  
+- Feature-Sliced Architecture  
+- Code Splitting & Modularity  
+- Custom React Hooks  
+- State Management with Zustand  
+- Advanced Typing in TypeScript  
+- Multimedia Handling (Audio & Video)  
+- Dynamic Rendering Based on Config  
+- Efficient Resource Cleanup  
+- Child-centric UX/UI Design  
+
+## Additional Info
+
+### ❤️ Handmade and Designed with Love
+
+- All 18 physical boxes handcrafted and uniquely styled.
+- Riddle scenes created using image/video editors featuring custom cartoon animations.
+
+### ✍️ Original Riddle Content
+
+- Several riddles custom-written by the developer.
+- Others selected from child-safe Ukrainian sources.
+
+### 🎁 Fully Personalized for Daniela
+
+- Audio, images, and achievements personalized for Daniela.
+- Themed with her favorite characters and real-world memories.
+
+### 🔮 Optional Future Extensions
+
+- Potential for parent customization: upload photos, edit riddles, add greetings.
+- Can be adapted for other birthdays or themed events.
+
+
