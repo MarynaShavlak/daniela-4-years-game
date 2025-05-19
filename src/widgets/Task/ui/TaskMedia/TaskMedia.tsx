@@ -1,14 +1,13 @@
 import React from "react";
+import { VideoBackground } from '@/shared/ui/VideoBackground/VideoBackground';
 
-import clx from './TaskMedia.module.css';
 
-export const TaskMedia = ({ videoSrc }: { videoSrc?: string | null }) => {
+export const TaskMedia = ({ videoSrc, videoId }: { videoSrc?: string | null, videoId: string }) => {
     return (
         <>
             {videoSrc && (
-                <video autoPlay className={clx.fullscreenVideo} loop>
-                    <source src={videoSrc} type="video/mp4" />
-                </video>
+                <VideoBackground id={videoId} video={videoSrc} />
+
             )}
         </>
     );

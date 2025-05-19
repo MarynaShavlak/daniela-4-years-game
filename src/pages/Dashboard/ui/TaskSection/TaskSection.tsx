@@ -1,8 +1,8 @@
 import React from "react";
 import clx from "./TaskSection.module.css";
 import {  TaskButtonList } from "../TaskButtonList/TaskButtonList";
-import { TaskItem, TasksGroup } from '@/widgets/Task/model/tasksData';
-import { TaskProps } from '@/widgets/Task/ui/Task';
+import { TaskItem} from '@/widgets/Task/model/tasksData';
+
 
 interface TaskSectionProps {
     tasksGroups: TaskItem[][];

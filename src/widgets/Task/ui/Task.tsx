@@ -32,7 +32,7 @@ const {handleToAllTasksClick, taskName, controlsPos} = props;
 
     return (
         <div className={clx.question}>
-            <TaskMedia videoSrc={media.video} />
+            <TaskMedia videoSrc={media.video} videoId={taskName} />
             <TaskControls
                 handleToAllTasksClick={handleToAllTasksClick}
                 positionStyles={positionStyles}

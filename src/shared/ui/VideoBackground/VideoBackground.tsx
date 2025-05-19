@@ -1,5 +1,5 @@
 import React from "react";
-
+import ReactPlayer from "react-player";
 import clx from "./VideoBackground.module.css";
 
 interface VideoBackgroundProps {
@@ -10,9 +10,21 @@ interface VideoBackgroundProps {
 }
 
 export const VideoBackground = (props: VideoBackgroundProps) => {
-    const {id, video, loop= true, controls= false} = props;
+    const { id, video, loop = true, controls = false } = props;
+
     return (
-    <video autoPlay id={id} controls={controls} className={clx.fullscreenVideo} loop={loop}>
-        <source src={video} type="video/mp4" />
-    </video>
-)};
+        <div id={id} className={clx.fullscreenVideo}>
+            <ReactPlayer
+                url={video}
+                playing
+                loop={loop}
+                controls={controls}
+                muted
+                width="100%"
+                height="100%"
+                className={clx.reactPlayer}
+            />
+        </div>
+    );
+};
+
