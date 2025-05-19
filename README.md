@@ -133,3 +133,22 @@ https://github.com/user-attachments/assets/ebbe24db-1a22-434a-b9a9-593f708958a2
 - Can be adapted for other birthdays or themed events.
 
 
+https://github.com/user-attachments/assets/4a62b23e-4f88-425e-ba19-20f0e39d754d
+https://github.com/user-attachments/assets/396328e7-d55a-41a9-bcf7-83c1ae2878c2
+https://github.com/user-attachments/assets/ece159db-ccfe-40fe-ba10-e8a039ca0ce6
+https://github.com/user-attachments/assets/a2761b35-3a13-4aa7-bbe0-38407eef666c
+https://github.com/user-attachments/assets/257a4c86-22e6-403b-af20-dbbf38c87d55
+https://github.com/user-attachments/assets/0e592090-9ab4-4a23-a65e-25b15e286b08
+https://github.com/user-attachments/assets/6f803a15-483b-4b46-91af-8d9f24dd554f
+https://github.com/user-attachments/assets/b2c85b4a-c1b3-4712-9a2f-4677a46e0542
+https://github.com/user-attachments/assets/921fad00-3fc0-4368-8ef9-6a88ec88c9fb
+https://github.com/user-attachments/assets/6148e271-c970-4c2d-b3a2-0b55a275638c
+https://github.com/user-attachments/assets/00ac5fdf-1f4a-4bb7-9337-e84aae212d84
+https://github.com/user-attachments/assets/4b9d27b7-813c-4def-b8b4-20f0bb73f5f8
+https://github.com/user-attachments/assets/b51f7aff-4cbf-49f6-9d1f-ffe1d6e23e8e
+https://github.com/user-attachments/assets/e65f1e76-b3b6-4cbd-b539-a8e735101354
+https://github.com/user-attachments/assets/25866fa9-ff3b-4a67-a8a7-cd1d29514ecc
+https://github.com/user-attachments/assets/5041ecd6-2333-4f26-b1fb-91365e455e15
+
+
+
